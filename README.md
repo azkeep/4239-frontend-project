@@ -8,7 +8,7 @@ HTML files with 'partial.html' suffix will be ignored, so validator is compatibl
 
 # Team
 
-- Oleksandr Braiko (test)
+- Oleksandr Braiko
 - Maksym Ozirskyi 
 - Petykhachnyi Olexii
 - Andrii Kovalyk
