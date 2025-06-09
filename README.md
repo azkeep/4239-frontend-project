@@ -17,3 +17,4 @@ HTML files with 'partial.html' suffix will be ignored, so validator is compatibl
 - Oleksandra Honcharova
 - Viktoriia Remeniuk
 - Pavlo Demchenko
+- Mark Kozhydlo
