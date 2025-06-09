@@ -43,36 +43,26 @@
   >
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
 
-    <header></header>
-    <main>
-      <!--Oleksandra Honcharova-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.popular-music-carousel.partial.html"
-      ></section>
-      <!--Oleksandra Honcharova-->
-      <!--Andrii Kovalyk-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.features-with-icon.partial.html"
-      ></section>
-      <!--Andrii Kovalyk-->
-      <!--Petykchachnyi Olexii-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-include="index.testimonials.partial.html"
-      ></div>
-      <!--Petykchachnyi Olexii-->
-      <!--Yana Baidatska-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-include="index.news-articles.partial.html"
-      ></div>
-      <!--Yana Baidatska-->
-    </main>
-  </body>
+  <header>
+  </header>
+  <main>
+    <!--Oleksandra Honcharova-->
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-music-carousel.partial.html">
+      </section>
+    <!--Oleksandra Honcharova-->
+    <!--Andrii Kovalyk-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.features-with-icon.partial.html">
+    </section>
+    <!--Andrii Kovalyk-->
+    <!--Pavlo Demchenko-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.results.partial.html"></section>
+    <!--Pavlo Demchenko-->
+    <!--Petykchachnyi Olexii-->
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-include="index.testimonials.partial.html"></div>
+    <!--Petykchachnyi Olexii-->
+    <!--Yana Baidatska-->
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-include="index.news-articles.partial.html"></div>
+    <!--Yana Baidatska-->
+  </main>
+</body>
 </html>
