@@ -2,9 +2,10 @@
   Global Base Styles
   ------------------
 
-  ✅ Підключення шрифтів:
+  ✅ Підключення шрифтів та кольору тексту:
      - 'Noto Sans' — основний шрифт для тексту
      - 'Righteous' — декоративний шрифт для заголовків
+     - 'white' — основний колір шрифта
 
   ✅ Стартовий Reset:
      - Обнуляє margin та padding для всіх елементів і псевдоелементів
@@ -15,6 +16,8 @@
      - Видалення стандартних маркерів у списках (ul, ol)
      - Відключення підкреслення у посиланнях + спадкування кольору
      - Зображення завжди адаптивні, не виходять за межі контейнера
+
+  ✅ Статичний фон усіх сторінок
 
      !!!!!  Усі, хто додає нові CSS-властивості, обов’язково залишайте коментар:
           - Що саме робить ця властивість
@@ -56,4 +59,25 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/*статичний bagground який однаковий для всіх сторінок*/
+body {
+  margin: 0;
+  background-color: rgba(26, 26, 41, 1);
+  background-image: linear-gradient(
+      rgba(26, 26, 41, 0.9),
+      rgba(26, 26, 41, 0.9)
+    ),
+    url("../img/bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* основний колір та шрифт */
+body {
+  color: #fff; /* або white */
+  font-family: 'Noto Sans', sans-serif;
 }

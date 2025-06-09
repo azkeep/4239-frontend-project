@@ -1,0 +1,79 @@
+.features-with-icon {
+  /* Контейнер фіч-блоку */
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid rgb(43, 43, 56);
+  padding-top: 70px;
+}
+
+.feature {
+  /* Окрема фіча-картка */
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+  padding: 0 20px;
+  height: 240px;
+  justify-content: space-between;
+}
+
+.feature__img--wrapper {
+  /* Кругла рамка навколо іконки */
+  width: 100px;
+  height: 100px;
+  background-color: rgb(43, 43, 72);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature__img {
+  /* Зображення-іконка всередині кружечка */
+}
+
+.feature__title {
+  /* Заголовок кожної фічі */
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.feature__title-underline {
+  /* Кольорова підкреслююча лінія */
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-top: 4px;
+}
+
+.feature__title-underline--web-mobile {
+  /* унікальний колір лінії */
+  background-color: rgb(225, 0, 255);
+}
+
+.feature__title-underline--best-music {
+  /* унікальний колір лінії */
+  background-color: rgb(255, 116, 51);
+}
+
+.feature__title-underline--interesting-podcasts {
+  /* унікальний колір лінії */
+  background-color: rgb(127, 0, 255);
+}
+
+.feature__title-underline--fantastic-hosts {
+  /* унікальний колір лінії */
+  background-color: rgb(72, 88, 249);
+}
+
+.feature__description {
+  /* Короткий опис фічі */
+  color: rgb(204, 204, 204);
+  line-height: 24px;
+}
