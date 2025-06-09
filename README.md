@@ -15,3 +15,4 @@ HTML files with 'partial.html' suffix will be ignored, so validator is compatibl
 - Hrabar Yana
 - Baidatska Yana
 - Oleksandra Honcharova
+- Viktoriia Remeniuk
