@@ -1,13 +1,13 @@
 .podcasts-radio-app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap:30px;
   height: 589px;
-  padding: 160px 0;
   background-image: url("../img/podcasts-page/podcasts-radio-app-bg.png");
   background-repeat: no-repeat;
-  background-position: 0 -480px;
+  background-position: 0 70%;
   background-size: cover;
   position: relative;
   margin: 50px 0;
