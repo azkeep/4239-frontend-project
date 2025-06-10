@@ -10,19 +10,13 @@
     <link rel="shortcut icon" href="https://placekitten.com/96/139" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="css/contacts.css"
 </head>
 
-<body style="
-      margin: 0;
-      background-image: url('img/BG-images.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-color: #0f1123;
-      background-attachment: fixed;
-    ">
+<body>
     <header>
-        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-include="contacts.header-hero.partial.html"></div>
+        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="contacts.header-hero.partial.html"></div>
+        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="contacts.register.partial.html"></div>
     </header>
 </body>
 

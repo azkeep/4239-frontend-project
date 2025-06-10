@@ -1,0 +1,18 @@
+.contacts__intro{
+    background-color: #1a1b29;
+}
+.contacts__title{
+    color: white;
+}
+.contacts__links{
+    color: white;
+}
+.contact__link{
+    color: white;
+}
+.contacts__link--active{
+    color: #ff7433;
+}
+.contacts__description{
+    color: #cccccc;
+}
