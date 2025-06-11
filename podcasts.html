@@ -10,10 +10,18 @@
       href="https://placekitten.com/96/139"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/podcasts.css">
+    <link rel="stylesheet" href="./css/podcasts.css" />
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
   </head>
   <body>
+    <!-- Maksym Oleksiv -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="podcasts.podcast-blocks.partial.html"
+    ></section>
+    <!-- Maksym Oleksiv -->
+
     <!--Andrii Kovalyk-->
     <section
       data-hx-trigger="load"
