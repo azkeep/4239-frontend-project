@@ -1,0 +1,94 @@
+/*Vladyslava Shcherbyna*/
+body {
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #1a1e2b;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: #1a1e2b;
+  padding: 30px;
+  border-radius: 0;
+}
+
+.program-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.program-title {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.program-description {
+    color: #fff;
+    font-size: 1.6em;
+    text-align: right;
+    max-width: 500px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.star {
+  color: #4858F9;
+  margin-right: 5px;
+  font-size: 34px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #1a1e2b;
+  color: #ff6f3c;
+  padding: 15px 10px;
+  font-size: 1em;
+  text-align: center;
+  border-bottom: 1px solid #2e3245;
+  font-weight: 500;
+}
+
+td {
+  border-top: 1px solid #2e3245;
+  border-bottom: 1px solid #2e3245;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: 400;
+}
+
+tr:nth-child(odd),
+tr:nth-child(even) {
+  background-color: #1a1e2b;
+}
+
+td:first-child {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+th:first-child {
+  text-align: left;
+  padding-left: 20px;
+  color: #fff;
+}
