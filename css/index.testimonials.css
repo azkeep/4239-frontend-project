@@ -1,0 +1,32 @@
+@import url(https://fonts.google.com/share?selection.family=Noto+Sans:ital,wght@0,100..900;1,100..900);
+
+.testimonials__title {
+    color: rgb(219, 219, 219);
+    font-size: 12px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.testimonial__info {
+    margin: 10px auto;
+}
+
+
+
+.testimonials__star {
+    color: orangered;
+    font-size: 30px;
+}
+
+.testimonials__intro {
+    background-color: rgb(26 27 41);
+    color: white;
+}
+
+.testimonials__list {
+    background-color: rgb(26 27 41);
+    color: white;
+}
+
+.testimonial__avatar {
+    width: 70px;
+}
