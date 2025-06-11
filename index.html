@@ -1,107 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="shortcut icon"
-      href="https://placekitten.com/96/139"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-  </head>
 
-  <body>
-    <!--Hrabar Yana-->
-    <header>
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.nav.partial.html"
-      ></nav>
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.header-hero.partial.html"
-      ></div>
-    </header>
-    <!--Hrabar Yana-->
-    <main>
-      <!--Viktoriia Remeniuk-->
-      <section class="popular-songs" id="popular-songs">
-        <figure class="popular-songs__media">
-          <img
-            class="popular-songs__image"
-            src="img/popular-songs.png"
-            alt="Two podcast hosts having a conversation in a studio"
-          />
-        </figure>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="shortcut icon" href="https://placekitten.com/96/139" type="image/x-icon" />
+  <link rel="stylesheet"
+    href="https://fonts.google.com/share?selection.family=Noto+Sans:ital,wght@0,100..900;1,100..900">
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
 
-        <figcaption class="popular-songs__caption">
-          <span class="popular-songs__category">Popular Songs</span>
-          <p class="popular-songs__description">
-            Explore our
-            <strong class="popular-songs__highlight">best songs</strong> of the
-            week, from rap to jazz. Work, dance, and dream with us.
-          </p>
-        </figcaption>
-      </section>
-      <!--Viktoriia Remeniuk-->
-      <!--Oleksandra Honcharova-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.popular-music-carousel.partial.html"
-      ></section>
-      <!--Oleksandra Honcharova-->
+<body>
+  <!--Hrabar Yana-->
+  <header>
+    <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.nav.partial.html"></nav>
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-hero.partial.html"></div>
+  </header>
+  <!--Hrabar Yana-->
+  <main>
+    <!--Viktoriia Remeniuk-->
+    <section class="popular-songs" id="popular-songs">
+      <figure class="popular-songs__media">
+        <img class="popular-songs__image" src="img/popular-songs.png"
+          alt="Two podcast hosts having a conversation in a studio" />
+      </figure>
 
-      <!-- Maksym Oleksiv -->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.top-by-genre.partial.html"></section>
-      <!-- Maksym Oleksiv -->
+      <figcaption class="popular-songs__caption">
+        <span class="popular-songs__category">Popular Songs</span>
+        <p class="popular-songs__description">
+          Explore our
+          <strong class="popular-songs__highlight">best songs</strong> of the
+          week, from rap to jazz. Work, dance, and dream with us.
+        </p>
+      </figcaption>
+    </section>
+    <!--Viktoriia Remeniuk-->
+    <!--Oleksandra Honcharova-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-music-carousel.partial.html">
+    </section>
+    <!--Oleksandra Honcharova-->
+    <!--Andrii Kovalyk-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.features-with-icon.partial.html">
+    </section>
+    <!--Andrii Kovalyk-->
 
-      <!--Andrii Kovalyk-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.features-with-icon.partial.html"
-      ></section>
-      <!--Andrii Kovalyk-->
+    <!--Maksym Ozirskyi-->>
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.latest-podcasts.partial.html"></section>
+    <!--Maksym Ozirskyi-->>
 
-      <!--Maksym Ozirskyi-->>
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.latest-podcasts.partial.html"
-      ></section>
-      <!--Maksym Ozirskyi-->>
+    <!--Pavlo Demchenko-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.results.partial.html"></section>
+    <!--Pavlo Demchenko-->
+    <!--Petykchachnyi Olexii-->
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.testimonials.partial.html"></div>
+    <!--Petykchachnyi Olexii-->
+    <!--Yana Baidatska-->
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-include="index.news-articles.partial.html"></div>
+    <!--Yana Baidatska-->
+  </main>
+</body>
 
-      <!--Pavlo Demchenko-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.results.partial.html"
-      ></section>
-      <!--Pavlo Demchenko-->
-      <!--Petykchachnyi Olexii-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.testimonials.partial.html"
-      ></div>
-      <!--Petykchachnyi Olexii-->
-      <!--Yana Baidatska-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.news-articles.partial.html"
-      ></div>
-      <!--Yana Baidatska-->
-    </main>
-  </body>
 </html>
