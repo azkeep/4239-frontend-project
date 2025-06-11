@@ -1,5 +1,8 @@
-@import "global.css";
-@import "index.features-with-icon.css";
-@import "index.testimonials.css";
-@import "index.header-hero.css";
-@import "index.latest-podcasts.css"
+@import 'global.css';
+@import 'index.features-with-icon.css';
+@import 'index.testimonials.css';
+@import 'index.header-hero.css';
+@import 'index.latest-podcasts.css';
+@import 'about-us.vision-mission.css';
+@import 'about-us.join-community.css';
+@import 'about-us.carousel.css';
