@@ -59,7 +59,11 @@
 .contacts__input {}
 
 .contacts__button {
-    background-color: #7f00fc;
-    width: 100px;
-    height: 25px;
+    background-color: var(--button-color);
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    text-align: right;
+    border-radius: 10px;
+    color:var(--button-color)
 }

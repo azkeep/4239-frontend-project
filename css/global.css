@@ -65,10 +65,8 @@ img {
 body {
   margin: 0;
   background-color: rgba(26, 26, 41, 1);
-  background-image: linear-gradient(
-      rgba(26, 26, 41, 0.9),
-      rgba(26, 26, 41, 0.9)
-    ),
+  background-image: linear-gradient(rgba(26, 26, 41, 0.9),
+      rgba(26, 26, 41, 0.9)),
     url("../img/bg-image.png");
   background-size: cover;
   background-position: center;
@@ -78,6 +76,15 @@ body {
 
 /* основний колір та шрифт */
 body {
-  color: #fff; /* або white */
+  color: #fff;
+  /* або white */
   font-family: 'Noto Sans', sans-serif;
+}
+
+:root {
+  --title-color: white;
+  --text-color: #DBDBDB;
+  --border-color: #31323f;
+  --button-color: white;
+  --button-background-color: #7f00fc;
 }
