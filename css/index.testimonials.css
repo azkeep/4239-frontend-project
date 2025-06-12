@@ -74,6 +74,7 @@
                 }
 
                 .testimonial__author {
+                    text-transform: uppercase;
                     font-weight: bold;
                     font-family: "Noto Sans", sans-serif;
                     font-size: 12px;

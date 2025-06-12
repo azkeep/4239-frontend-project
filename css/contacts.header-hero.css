@@ -17,6 +17,7 @@
                 margin-top: 25px;
 
                 .contacts__link {
+                    text-transform: uppercase;
                     font-family: "Noto Sans", sans-serif;
                     color: var(--text-color);
                     font-size: 12px;
@@ -27,10 +28,12 @@
                     margin: 0 -15px 0 10px;
                 }
 
-                .contacts__link--active:hover {
+                .contacts__link--active {
                     text-decoration: underline;
                     cursor: pointer;
                     color: orangered;
+                    font-size: 12px;
+                    text-transform: uppercase;
                 }
             }
 
@@ -47,13 +50,14 @@
 
                 }
 
-                @media (min-width:1561px) {
+                @media (min-width:690px) {
                     display: flex;
                     flex-direction: row;
                     align-items: flex-end;
                     justify-content: flex-end;
                     position: relative;
-                    bottom: 100px;
+                    bottom: 140px;
+                    left: 50px;
                 }
             }
         }
