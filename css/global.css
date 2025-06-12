@@ -7,6 +7,10 @@
      - 'Righteous' — декоративний шрифт для заголовків
      - 'white' — основний колір шрифта
 
+     від Олександр Брайко
+     Зауважу, що не всюди текст білий. Білий у заголовках, тіло тексту
+     буває кольору #cccccc. Дивіться уважно на оріджин.
+
   ✅ Стартовий Reset:
      - Обнуляє margin та padding для всіх елементів і псевдоелементів
      - Встановлює box-sizing: border-box для передбачуваного розміру блоків
@@ -47,8 +51,12 @@
   --accent-color-two:#7f00ff;
   --accent-color-three:#FF7433;
   --accent-color-four:#4858F9;
+
   --podcast-title-color:#ffffff;
   --podcast-text-color:#cccccc;
+
+  --popular-artists-title-color:#ffffff;
+  --popular-artists-text-color:#cccccc;
 }
 
 /* Плавні анімації по замовчуванню */
