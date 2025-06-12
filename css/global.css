@@ -83,7 +83,7 @@ img {
   display: block;
 }
 
-/*статичний bagground який однаковий для всіх сторінок*/
+/*статичний background який однаковий для всіх сторінок*/
 body {
   background-color: rgba(26, 26, 41, 1);
   background-image: linear-gradient(rgba(26, 26, 41, 0.9),
