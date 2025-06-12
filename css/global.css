@@ -63,7 +63,6 @@ img {
 
 /*статичний bagground який однаковий для всіх сторінок*/
 body {
-  margin: 0;
   background-color: rgba(26, 26, 41, 1);
   background-image: linear-gradient(
       rgba(26, 26, 41, 0.9),
