@@ -101,3 +101,8 @@ body {
   --button-color: white;
   --button-background-color: #7f00fc;
 }
+
+/* клас який обмежує ширину контентної частини*/
+.content-container{
+  max-width: 1200px;
+}

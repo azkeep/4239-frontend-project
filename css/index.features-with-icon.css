@@ -1,31 +1,31 @@
 .features-with-icon {
   /* Контейнер фіч-блоку */
-  color: white;
-  font-family: "Noto Sans", sans-serif;
-  display: flex;
-  width: 100%;
-  max-width: 1170px;
-  margin: 50px auto;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
   border-top: 2px solid rgb(43, 43, 56);
-  padding-top: 70px;
+  width: 272px;
+  margin: auto;
+  margin-top: 50px;
+  gap: 40px; 
 }
+
 
 .features-with-icon__item {
   /* Окрема фіча-картка */
   display: flex;
   flex-direction: column;
   max-width: 302px;
-  padding: 0 20px;
-  height: 240px;
+  min-height: 205px;
   justify-content: space-between;
 }
 
+.features-with-icon__item:first-child{
+  margin-top: 70px;
+}
 .features-with-icon__image-wrapper {
   /* Кругла рамка навколо іконки */
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-color: rgb(43, 43, 72);
   border-radius: 50%;
   display: flex;
@@ -35,19 +35,19 @@
 
 .features-with-icon__image {
   /* Зображення-іконка всередині кружечка */
+  width: 40px;
 }
 
 .features-with-icon__title {
   /* Заголовок кожної фічі */
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
-  margin-top: 20px;
 }
 
 .features-with-icon__title-underline {
   /* Кольорова підкреслююча лінія */
   display: block;
-  width: 30px;
+  width: 40px;
   height: 4px;
   margin-top: 4px;
 }
