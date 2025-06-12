@@ -2,26 +2,28 @@
   /* Контейнер фіч-блоку */
   display: grid;
   grid-template-columns: 1fr;
-  border-top: 2px solid rgb(43, 43, 56);
-  width: 272px;
+  min-width: 272px;
   margin: auto;
   margin-top: 50px;
-  gap: 40px; 
+  gap: 40px;
+  padding: 0 20px;
 }
 
+.features-with-icon__title-overline {
+  /*лінія яка відділяє блок від попереднього контенту*/
+  display: block;
+  height: 2px;
+  background-color: rgb(43, 43, 56);
+  margin-bottom: 30px;
+}
 
 .features-with-icon__item {
   /* Окрема фіча-картка */
   display: flex;
   flex-direction: column;
-  max-width: 302px;
-  min-height: 205px;
-  justify-content: space-between;
+  gap: 20px;
 }
 
-.features-with-icon__item:first-child{
-  margin-top: 70px;
-}
 .features-with-icon__image-wrapper {
   /* Кругла рамка навколо іконки */
   width: 70px;
@@ -47,7 +49,7 @@
 .features-with-icon__title-underline {
   /* Кольорова підкреслююча лінія */
   display: block;
-  width: 40px;
+  width: 15%;
   height: 4px;
   margin-top: 4px;
 }
@@ -76,4 +78,30 @@
   /* Короткий опис фічі */
   color: rgb(204, 204, 204);
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .features-with-icon {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 32px;
+  }
+  .features-with-icon__title-overline {
+    grid-column: 1 / -1;
+  }
+  .features-with-icon__image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .features-with-icon__image {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .features-with-icon {
+    padding: 0 40px;
+  }
+  .features-with-icon__title {
+    font-size: 24px;
+  }
 }
