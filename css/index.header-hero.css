@@ -1,10 +1,15 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1a1b29;
-  padding: 20px;
-  flex-wrap: wrap; /* щоб підтримувалась адаптивність */
+  margin: 0;
+  background-image: linear-gradient(
+      rgba(26, 26, 41, 0.9),
+      rgba(26, 26, 41, 0.9)
+    ),
+    url("../img/bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 0;
 }
 
 .header__container {
@@ -12,8 +17,9 @@
   margin: 0 auto;
   padding-inline: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -27,6 +33,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
+  justify-content: center;
 }
 
 .header__menu-item a {
@@ -45,106 +53,239 @@
   align-items: center;
   gap: 8px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .header__button-icon {
   display: flex;
   align-items: center;
 }
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #0e0e24;
+
+.header__button-text {
+  display: inline;
   color: white;
-  font-family: "Arial", sans-serif;
 }
-.listen-now-section {
+
+.header__burger-toggle {
+  display: none;
+}
+
+.header__burger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.header__burger-icon span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.header__burger-close {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+.header__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a29;
+  z-index: 1000;
+  padding: 20px;
+  text-align: center;
+}
+
+.header__mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header__mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.header__mobile-menu-list li {
+  margin-bottom: 24px;
+}
+
+.header__mobile-menu-list a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header__button--mobile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #a200ff, #6200ff);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.header__button--mobile img {
+  width: 20px;
+  height: 20px;
+}
+#burger-toggle:checked + .header__burger-icon {
+  display: none;
+}
+
+#burger-toggle:checked ~ .header__burger-close {
+  display: flex;
+}
+.header__burger-toggle:checked ~ .header__mobile-menu {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .header__menu,
+  .header__button {
+    display: flex;
+  }
+
+  .header__burger-icon,
+  .header__burger-close,
+  .header__mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__menu,
+  .header__button {
+    display: none;
+  }
+
+  .header__burger-icon {
+    display: flex;
+  }
+}
+
+.listen-now {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
-.description {
-  color: #ccc;
-  max-width: 400px;
-  margin: 0; 
-}
-.slogan {
-  font-size: 16px;
-  margin: 0;
-  color: #ffffff;
-}
-.slogan-line {
-  width: 100px;
-  height: 4px;
-  background-color: #ff6600;
-  margin: 0 auto;
-}
 
-.fm-icon {
-  width: 30px;
-  height: auto;
-  margin: 10px 0 0;
-}
-
-.frequency {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  margin: 0;
-}
-
-.logo {
-  margin: 0;
-  font-weight: bold;
-  color: white;
-}
-.logo--big {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.star {
-  color: #ff2d55;
-  font-size: 48px;
-  vertical-align: top;
-  margin-left: 2px;
-}
-
-.subtitle {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 0 0 20px 0;
-}
-
-.top-row {
+.listen-now__row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
-.top-column {
+
+.listen-now__column {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.top-column--left {
-  text-align: left;
-}
-.top-column--center {
+
+.listen-now__column--center {
   align-items: center;
   text-align: center;
 }
 
-.main-title {
+.listen-now__title {
   font-size: 60px;
   font-weight: 800;
-  margin: 0;
+  margin: 0 0 24px 0;
   color: white;
-  margin: 0 0 24px 0; 
 }
-.podcast-label {
+
+.listen-now__subtitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
+.listen-now__description {
+  color: #ccc;
+  max-width: 400px;
+  margin: 0;
+}
+
+.listen-now__slogan {
+  font-size: 16px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.listen-now__slogan-line {
+  width: 100px;
+  height: 4px;
+  background-color: #ff6600;
+  margin: 0 auto;
+}
+
+.listen-now__fm-icon {
+  width: 30px;
+  height: auto;
+  margin: 10px 0 0;
+}
+
+.listen-now__frequency {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.listen-now__logo {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.listen-now__logo--big {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.listen-now__logo-star {
+  color: #ff2d55;
+  font-size: 48px;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.listen-now__podcast-label {
   font-size: 12px;
   font-weight: 600;
   color: white;
@@ -154,30 +295,31 @@ body {
   letter-spacing: 0.5px;
 }
 
-.podcast-columns {
+.listen-now__podcast-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 40px;
 }
 
-.podcast-item {
+.listen-now__podcast-item {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.podcast-item img {
+.listen-now__podcast-item img {
   width: 20px;
   height: 20px;
 }
 
-.podcast-item a {
+.listen-now__podcast-link {
   font-size: 16px;
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-.podcast-item a:hover {
+
+.listen-now__podcast-link:hover {
   color: #ff2d55;
 }
