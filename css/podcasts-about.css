@@ -1,0 +1,174 @@
+/* Oleksandr Braiko             */
+
+.podcast-about {
+    max-width: 1170px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px 0 40px;
+    margin: auto;
+
+    .podcast-about-block {
+        width: 100%;
+        display: flex;
+
+        .podcast-about-title {
+            width: 42%;
+            padding: 0 20px 0 20px;
+
+            .podcast-about-title-star {
+                color: var(--accent-color-two);
+                font-size: 34px;
+                font-family: Righteous, sans-serif;
+            }
+
+            .podcast-about-title-text {
+                color: #CCCCCC;
+                margin: 25px 0 0 0;
+                text-transform: uppercase;
+                text-align: justify;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .podcast-about-text {
+            width: 58%;
+            color: #CCCCCC;
+            padding: 0 20px 0 20px;
+        }
+    }
+
+    .podcast-divider {
+        margin: 50px 0 0 0;
+    }
+
+    .podcast-episodes-block {
+        display: flex;
+        margin: 55px 0 0 0;
+
+        .podcast-episodes-title {
+            width: 42%;
+            color: #CCCCCC;
+            padding: 0 20px 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+        }
+
+        .podcast-episodes-list {
+            padding: 0 20px 0 20px;
+            width: 58%;
+
+            .podcast-episodes-item {
+                .item-meta {
+                    color: var(--podcast-title-color);
+                    font-size: 15px;
+                    font-weight: bold;
+                    margin: 0 0 16px 0;
+                    height: 24px;
+                    vertical-align: baseline;
+
+                    .item-date {
+                        padding: 0 12px 0 0;
+                        margin: 0 0 16px 0;
+                        height: 24px;
+
+                        .item-date-icon {
+                            color: var(--accent-color-three);
+                            position: relative;
+                            top: 6px;
+                            width: 20px;
+                            height: 24px;
+                        }
+
+                        .item-date-text {
+                            margin: 0 0 0 10px;
+                            height: 24px;
+                        }
+                    }
+
+                    .item-author {
+                        padding: 0 12px 0 12px;
+                        margin: 0 0 16px 0;
+                        height: 24px;
+
+                        .item-author-icon {
+                            color: var(--accent-color-three);
+                            position: relative;
+                            top: 6px;
+                            width: 20px;
+                            height: 24px;
+                        }
+
+                        .item-author-text {
+                            margin: 0 0 0 10px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                .item-title {
+                    margin: 20px 0 0 0;
+                    font-size: 21px;
+
+                    .item-title-chapter {
+                        font-weight: bold;
+                    }
+                }
+
+                .item-about {
+                    margin: 25px 0 0 0;
+                    color: var(--podcast-text-color);
+                }
+
+                .item-button {
+                    height: 42px;
+                    width: 195px;
+                    margin: 35px 0 0 0;
+                    background-image: linear-gradient(
+                            45deg,
+                            var(--accent-color-one),
+                            var(--accent-color-four)
+                    );
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    letter-spacing: 1.1px;
+                    display: inline-block;
+                    border: none;
+                    padding: 5px 15px;
+                    text-align: center;
+                    border-radius: 21px;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-image: linear-gradient(
+                                45deg,
+                                var(--accent-color-four),
+                                var(--accent-color-one)
+
+                        );
+                        cursor: pointer;
+                    }
+                    /**/
+
+                    .item-button-icon {
+                        position: relative;
+                        top: 6px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .item-spacer {
+                    height: 80px;
+                }
+            }
+        }
+
+    }
+}
+

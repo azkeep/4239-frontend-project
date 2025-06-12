@@ -37,6 +37,20 @@
   box-sizing: border-box;
 }
 
+/*
+  Олександр Брайко:
+  Додав змінних для акцентних кольорів
+  зірки, слеши, кольори іконок, і т.д.
+*/
+:root {
+  --accent-color-one:#e100ff;
+  --accent-color-two:#7f00ff;
+  --accent-color-three:#FF7433;
+  --accent-color-four:#4858F9;
+  --podcast-title-color:#ffffff;
+  --podcast-text-color:#cccccc;
+}
+
 /* Плавні анімації по замовчуванню */
 html {
   scroll-behavior: smooth;
