@@ -1,31 +1,33 @@
 .features-with-icon {
   /* Контейнер фіч-блоку */
-  color: white;
-  font-family: "Noto Sans", sans-serif;
-  display: flex;
-  width: 100%;
-  max-width: 1170px;
-  margin: 50px auto;
-  align-items: center;
-  justify-content: space-around;
-  border-top: 2px solid rgb(43, 43, 56);
-  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: 272px;
+  margin: auto;
+  margin-top: 50px;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.features-with-icon__title-overline {
+  /*лінія яка відділяє блок від попереднього контенту*/
+  display: block;
+  height: 2px;
+  background-color: rgb(43, 43, 56);
+  margin-bottom: 30px;
 }
 
 .features-with-icon__item {
   /* Окрема фіча-картка */
   display: flex;
   flex-direction: column;
-  max-width: 302px;
-  padding: 0 20px;
-  height: 240px;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .features-with-icon__image-wrapper {
   /* Кругла рамка навколо іконки */
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-color: rgb(43, 43, 72);
   border-radius: 50%;
   display: flex;
@@ -35,19 +37,19 @@
 
 .features-with-icon__image {
   /* Зображення-іконка всередині кружечка */
+  width: 40px;
 }
 
 .features-with-icon__title {
   /* Заголовок кожної фічі */
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
-  margin-top: 20px;
 }
 
 .features-with-icon__title-underline {
   /* Кольорова підкреслююча лінія */
   display: block;
-  width: 30px;
+  width: 15%;
   height: 4px;
   margin-top: 4px;
 }
@@ -76,4 +78,30 @@
   /* Короткий опис фічі */
   color: rgb(204, 204, 204);
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .features-with-icon {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 32px;
+  }
+  .features-with-icon__title-overline {
+    grid-column: 1 / -1;
+  }
+  .features-with-icon__image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .features-with-icon__image {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .features-with-icon {
+    padding: 0 40px;
+  }
+  .features-with-icon__title {
+    font-size: 24px;
+  }
 }

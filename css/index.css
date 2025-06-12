@@ -1,5 +1,7 @@
 @import 'global.css';
 @import 'index.features-with-icon.css';
+@import 'index.popular-artists.css'; /* Oleksandr Braiko */
+@import 'index.we-love-music.css'; /* Oleksandr Braiko */
 @import 'index.testimonials.css';
 @import 'index.header-hero.css';
 @import 'index.latest-podcasts.css';

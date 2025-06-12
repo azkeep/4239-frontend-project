@@ -20,21 +20,7 @@
   <!--Hrabar Yana-->
   <main>
     <!--Viktoriia Remeniuk-->
-    <section class="popular-songs" id="popular-songs">
-      <figure class="popular-songs__media">
-        <img class="popular-songs__image" src="img/popular-songs.png"
-          alt="Two podcast hosts having a conversation in a studio" />
-      </figure>
-
-      <figcaption class="popular-songs__caption">
-        <span class="popular-songs__category">Popular Songs</span>
-        <p class="popular-songs__description">
-          Explore our
-          <strong class="popular-songs__highlight">best songs</strong> of the
-          week, from rap to jazz. Work, dance, and dream with us.
-        </p>
-      </figcaption>
-    </section>
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-songs.partial.html"></section>
     <!--Viktoriia Remeniuk-->
     <!--Oleksandra Honcharova-->
     <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-music-carousel.partial.html">
@@ -52,6 +38,15 @@
     <!--Pavlo Demchenko-->
     <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.results.partial.html"></section>
     <!--Pavlo Demchenko-->
+
+    <!-- Oleksandr Braiko -->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-artists.partial.html"></section>
+    <!-- Oleksandr Braiko -->
+
+    <!-- Oleksandr Braiko -->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.we-love-music.partial.html"></section>
+    <!-- Oleksandr Braiko -->
+
     <!--Petykchachnyi Olexii-->
     <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.testimonials.partial.html"></div>
     <!--Petykchachnyi Olexii-->

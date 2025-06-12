@@ -1,0 +1,43 @@
+/*  by Oleksandr Braiko */
+
+.wlm-container {
+    font-family: "Noto Sans", sans-serif;
+    max-width: 1170px;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 15px 60px 15px;
+
+    .wlm-motto {
+        .wlm-motto-block{
+            padding: 0;
+        }
+
+        .wlm-affirmation {
+            color: var(--podcast-text-color);
+            margin: 25px 0 0 0;
+            text-transform: uppercase;
+            text-align: justify;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+        }
+
+        .wlm-message {
+            margin: 20px 0 0 0;
+            font-size: 68px;
+            color: var(--popular-artists-title-color);
+            font-family: Righteous, sans-serif;
+            font-weight: 400;
+
+            .wlm-message-accent-one {
+                color: var(--accent-color-one);
+            }
+
+            .wlm-message-accent-two {
+                color: var(--accent-color-two);
+            }
+        }
+    }
+}
