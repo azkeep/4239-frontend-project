@@ -28,30 +28,32 @@
             </p>
 
             <div class="contacts__data">
-                <img class="contacts__icon" src="img/contacts-icon/adress-icon.svg" width="26" alt="adress image">
-                <p class="contacts__label" style="color: #ff7433; font-size: 12px; font-family: sans-serif;">
-                    STUDIO ADRESS</p>
-                <br>
-                <p class="contacts__data-description" style="color: #cccccc; font-size: 16px; font-family: sans-serif">
-                    240
-                    Hooper St,
-                    Brooklyn,<br>NY
-                    11211, USA</p>
+                <img class="contacts__icon" src="img/contacts-icon/adress-icon.svg" alt="adress image">
+                <div class="contacts__label-container">
+                    <p class="contacts__label">
+                        studio adress</p>
+                    <p class="contacts__data-description">
+                        240
+                        Hooper St,
+                        Brooklyn,<br>NY
+                        11211, USA</p>
+                </div>
             </div>
 
             <div class="contacts__data">
                 <img class="contacts__icon" src="img/contacts-icon/phone-icon.svg" alt="phone image">
-                <p class="contacts__label">
-                    CONTACTS</p>
-                <br>
-                <nav class="contacts__links">
-                    <a href="#" class="contacts__link" target="_blank">+1 (234) 567 89 00</a>
-                    <br>
-                    <a href="#" class="contacts__link" target="_blank">echowave@email.com</a>
-                </nav>
+                <div class="contacts__label-container">
+                    <p class="contacts__label">
+                        Contacts</p>
+                    <nav class="contacts__links">
+                        <a href="#" class="contacts__link" target="_blank">+1 (234) 567 89 00</a>
+                        <br>
+                        <a href="#" class="contacts__link" target="_blank">echowave@email.com</a>
+                    </nav>
+                </div>
             </div>
 
-            <p class="contacts__radion-link">
+            <p class="contacts__radio-link">
                 <a href="#" class="contacts__radio-link--active" target="_blank"><b>Listen to the
                         radio</b></a> →
             </p>
@@ -59,27 +61,23 @@
 
         <div class="contacts__form">
             <form action="#">
-                <fieldset class="contacts__fieldset" style=" border: none;">
+                <fieldset class="contacts__fieldset">
                     <label class="contacts__input">
-                        <input type="text" name="user-name" placeholder="Your name*" style="border-radius: 25%;"
+                        <input type="text" name="user-name" placeholder="Your name*" style="border-radius: 20px;"
                             required>
                     </label>
-                    <br>
                     <label class="contacts__input">
-                        <input type="text" name="user-phone" placeholder="Phone Number*" style="border-radius: 25%;"
+                        <input type="text" name="user-phone" placeholder="Phone Number*" style="border-radius: 20px;"
                             required>
                     </label>
-                    <br>
                     <label class="contacts__input">
-                        <input type="text" name="user-email" placeholder="Email*" style="border-radius: 25%;" required>
+                        <input type="text" name="user-email" placeholder="Email*" style="border-radius: 20px;" required>
                     </label>
-                    <br>
                     <label class="contacts__input">
                         <textarea id="message" name="message" rows="5" cols="25" placeholder="Your message"
-                            style="border-radius: 20%;" required></textarea>
+                            style="border-radius: 20px;" required></textarea>
                     </label>
-                    <br>
-                    <button class="contacts__button" type="submit" style="border-radius: 25%;"
+                    <button class="contacts__button" type="submit" style="border-radius: 20px;"
                         name="submit">Submit</button>
                 </fieldset>
             </form>

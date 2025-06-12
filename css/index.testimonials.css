@@ -21,10 +21,8 @@
 
         @media (min-width:767px) {
             display: flex;
-            flex-dirуction: row;
+            flex-direction: row;
             justify-content: space-around;
-
-
         }
 
         .testimonials__description {
@@ -63,7 +61,6 @@
                 height: 70px;
                 border-radius: 50%;
                 object-fit: cover;
-                flex-shrink: 0;
             }
 
             .testimonial__content {
