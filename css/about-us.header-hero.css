@@ -1,0 +1,268 @@
+.about-us {
+  background-image: linear-gradient(
+      rgba(26, 26, 41, 0.9),
+      rgba(26, 26, 41, 0.9)
+    ),
+    url("../img/bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 0 40px;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #0f0f1b;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-us__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-us__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-us__title-group {
+  flex: 1 1 40%;
+}
+
+.about-us__title {
+  font-size: 68px;
+  font-family: 'Righteous', cursive;
+  color: #ffffff;
+  margin: 0 0 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.about-us__breadcrumb {
+  margin-top: 10px;
+}
+
+.about-us__breadcrumb-link {
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  color: var(--text-color, #cccccc);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.about-us__breadcrumb-separator {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  color: var(--text-color, #cccccc);
+  text-decoration: none;
+  font-weight: 700;
+}
+  
+.about-us__link--active {
+  text-decoration: underline;
+  color: orangered;
+  cursor: pointer;
+}
+
+.about-us__intro {
+  flex: 1 1 55%;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  color: #999999;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: left;
+  align-self: center;       
+  margin-top: 30px;        
+}
+
+.about-us__image-wrapper {
+  margin: 40px auto;
+  border: 4px solid #1c1c2e;
+  padding: 4px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.about-us__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.about-us__story {
+  margin-bottom: 40px;
+}
+
+.about-us__symbol {
+  font-size: 32px;
+  color: #a259ff;
+  margin: 0 0 10px;
+}
+
+.section-icon {
+	color: #ff5e3a;
+	font-size: 38px;
+	margin-bottom: 10px;
+	font-weight: 800;
+}
+
+.about-us__subtitle {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-us__text {
+  font-size: 16px;
+  color: #dddddd;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-us__text--lead {
+  font-size: 20px;
+  font-weight: 400;
+  color: #eeeeee;
+}
+
+.about-us__brand {
+  color: orangered;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.about-us__story-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.about-us__story-symbol {
+  flex: 1 1 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.about-us__story-content {
+  flex: 1 1 75%;
+  text-align: left;
+}
+
+.about-us__button {
+  background: linear-gradient(90deg, #a200ff, #6200ff);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: "Noto Sans", sans-serif;
+  display: inline-block;
+  width: max-content;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.about-us__button:hover {
+  background-color: #8a3ee6;
+}
+
+@media (max-width: 1024px) {
+  .about-us__title {
+    font-size: 48px;
+  }
+
+  .about-us__intro {
+    font-size: 17px;
+  }
+
+  .about-us__text {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us__header-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-us__title-group,
+  .about-us__intro {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-us__title {
+    font-size: 38px;
+  }
+
+  .about-us__breadcrumb,
+  .about-us__intro,
+  .about-us__text,
+  .about-us__subtitle {
+    font-size: 15px;
+  }
+
+  .about-us__container {
+    padding: 30px 16px;
+  }
+
+  .about-us__symbol {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .about-us__button {
+    display: block;
+    margin: 20px auto 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us__title {
+    font-size: 30px;
+  }
+
+  .about-us__intro,
+  .about-us__breadcrumb,
+  .about-us__text,
+  .about-us__subtitle,
+  .about-us__symbol {
+    text-align: center;
+  }
+
+  .about-us__image-wrapper {
+    padding: 2px;
+    border-width: 2px;
+  }
+
+  .about-us__text {
+    font-size: 14.5px;
+  }
+
+  .about-us__button {
+    font-size: 13px;
+  }
+}
