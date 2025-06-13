@@ -2,15 +2,21 @@
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
 }
+
 
 .listen-now__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: hidden;
 }
+
 
 .listen-now__column {
   flex: 1 1 300px;
@@ -124,4 +130,26 @@
 
 .listen-now__podcast-link:hover {
   color: #ff2d55;
+}
+@media (max-width: 600px) {
+  .listen-now__podcast-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .listen-now__title {
+    font-size: 36px;
+  }
+
+  .listen-now__logo--big {
+    font-size: 32px;
+  }
+
+  .listen-now__logo-star {
+    font-size: 48px;
+  }
+
+  .listen-now__frequency {
+    font-size: 24px;
+  }
 }
