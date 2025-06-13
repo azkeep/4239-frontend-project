@@ -1,3 +1,45 @@
 .latest-podcasts {
+  max-width: 1120px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
 
+.latest-podcasts__intro {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.latest-podcasts__label {
+  color:rgb(219,219,219);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.latest-podcasts__description {
+  font-size: 18px;
+  color: #fff;
+  max-width: 400px;
+  float: right;
+
+}
+
+.latest-podcasts__list{
+  display: flex;
+  gap: 30px;
+}
+
+.podcast-card {
+
+}
+
+.podcast-card__image {
+  width: 420px;
 }
