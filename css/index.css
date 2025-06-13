@@ -4,6 +4,7 @@
 @import 'index.we-love-music.css';          /* Oleksandr Braiko */
 @import 'index.testimonials.css';
 @import 'index.header-hero.css';
+@import "global.nav.css";
 @import 'index.latest-podcasts.css';
 @import 'about-us.vision-mission.css';
 @import 'about-us.join-community.css';
