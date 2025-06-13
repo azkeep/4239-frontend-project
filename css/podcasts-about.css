@@ -1,6 +1,6 @@
 /* Oleksandr Braiko             */
 
-.podcast-about {
+.podcast-about__container {
     max-width: 1170px;
     align-items: center;
     flex-direction: column;
@@ -8,22 +8,22 @@
     padding: 0 40px 0 40px;
     margin: auto;
 
-    .podcast-about-block {
+    .podcast-about__wrapper {
         width: 100%;
         display: flex;
 
-        .podcast-about-title {
+        .podcast-about__title {
             width: 42%;
             padding: 0 20px 0 20px;
 
-            .podcast-about-title-star {
+            .podcast-about__title__star {
                 color: var(--accent-color-two);
                 font-size: 34px;
                 font-family: Righteous, sans-serif;
             }
 
-            .podcast-about-title-text {
-                color: #CCCCCC;
+            .podcast-about__title__text {
+                color: var(--podcast-text-color);
                 margin: 25px 0 0 0;
                 text-transform: uppercase;
                 text-align: justify;
@@ -33,24 +33,24 @@
             }
         }
 
-        .podcast-about-text {
+        .podcast-about__text {
             width: 58%;
-            color: #CCCCCC;
+            color: var(--podcast-text-color);
             padding: 0 20px 0 20px;
         }
     }
 
-    .podcast-divider {
+    .podcast-about__divider {
         margin: 50px 0 0 0;
     }
 
-    .podcast-episodes-block {
+    .podcast-about__episodes__wrapper {
         display: flex;
         margin: 55px 0 0 0;
 
-        .podcast-episodes-title {
+        .podcast-about__episodes__title {
             width: 42%;
-            color: #CCCCCC;
+            color: var(--podcast-text-color);
             padding: 0 20px 0 20px;
             text-transform: uppercase;
             font-weight: bold;
@@ -58,12 +58,12 @@
             letter-spacing: 1.2px;
         }
 
-        .podcast-episodes-list {
+        .podcast-about__episodes__list {
             padding: 0 20px 0 20px;
             width: 58%;
 
-            .podcast-episodes-item {
-                .item-meta {
+            .podcast-about__episodes__item {
+                .item__meta {
                     color: var(--podcast-title-color);
                     font-size: 15px;
                     font-weight: bold;
@@ -71,12 +71,12 @@
                     height: 24px;
                     vertical-align: baseline;
 
-                    .item-date {
+                    .item__date {
                         padding: 0 12px 0 0;
                         margin: 0 0 16px 0;
                         height: 24px;
 
-                        .item-date-icon {
+                        .item__date-icon {
                             color: var(--accent-color-three);
                             position: relative;
                             top: 6px;
@@ -84,18 +84,18 @@
                             height: 24px;
                         }
 
-                        .item-date-text {
+                        .item__date-text {
                             margin: 0 0 0 10px;
                             height: 24px;
                         }
                     }
 
-                    .item-author {
+                    .item__author {
                         padding: 0 12px 0 12px;
                         margin: 0 0 16px 0;
                         height: 24px;
 
-                        .item-author-icon {
+                        .item__author-icon {
                             color: var(--accent-color-three);
                             position: relative;
                             top: 6px;
@@ -103,28 +103,28 @@
                             height: 24px;
                         }
 
-                        .item-author-text {
+                        .item__author-text {
                             margin: 0 0 0 10px;
                             height: 24px;
                         }
                     }
                 }
 
-                .item-title {
+                .item__title {
                     margin: 20px 0 0 0;
                     font-size: 21px;
 
-                    .item-title-chapter {
+                    .item__title-chapter {
                         font-weight: bold;
                     }
                 }
 
-                .item-about {
+                .item__about {
                     margin: 25px 0 0 0;
                     color: var(--podcast-text-color);
                 }
 
-                .item-button {
+                .item__button {
                     height: 42px;
                     width: 195px;
                     margin: 35px 0 0 0;
@@ -155,7 +155,7 @@
                     }
                     /**/
 
-                    .item-button-icon {
+                    .item__button-icon {
                         position: relative;
                         top: 6px;
                         width: 24px;
@@ -163,7 +163,7 @@
                     }
                 }
 
-                .item-spacer {
+                .item__spacer {
                     height: 80px;
                 }
             }
