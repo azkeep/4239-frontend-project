@@ -279,10 +279,10 @@
 }
 
 .listen-now__logo-star {
-  color: #ff2d55;
-  font-size: 48px;
-  vertical-align: top;
-  margin-left: 2px;
+  color: #ff5e3a;
+	font-size: 68px;
+	margin-bottom: 10px;
+	font-weight: 800;
 }
 
 .listen-now__podcast-label {
