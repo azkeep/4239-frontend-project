@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 15px 60px 15px;
+    padding: 60px 40px;
 
     .wlm-motto {
         .wlm-motto-block{
@@ -15,7 +15,7 @@
         }
 
         .wlm-affirmation {
-            color: var(--podcast-text-color);
+            color: var(--text-general-color);
             margin: 25px 0 0 0;
             text-transform: uppercase;
             text-align: justify;
@@ -27,7 +27,7 @@
         .wlm-message {
             margin: 20px 0 0 0;
             font-size: 68px;
-            color: var(--popular-artists-title-color);
+            color: var(--text-title-color);
             font-family: Righteous, sans-serif;
             font-weight: 400;
 
