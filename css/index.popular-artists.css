@@ -9,9 +9,9 @@
     padding: 0;
 
     .popular-artists__title {
-        font-family: Righteous, sans-serif;
+        font-family: var(--font-title);
         font-size: 38px;
-        color: var(--popular-artists-title-color);
+        color: var(--text-title-color);
     }
 
     .popular-artists__divider {
@@ -48,12 +48,11 @@
                 }
 
                 .item__info {
-                    font-family: "Noto Sans", sans-serif;
 
                     .item__info__name {
                         margin: 20px 0 0 0;
                         font-size: 24px;
-                        color: var(--popular-artists-title-color);
+                        color: var(--text-title-color);
                     }
 
                     .item__info__line {
@@ -94,7 +93,7 @@
                     .item__info__location {
                         height: 34px;
                         font-size: 16px;
-                        color: var(--popular-artists-text-color);
+                        color: var(--text-general-color);
                     }
                 }
             }
