@@ -19,11 +19,11 @@
             .podcast-about__title__star {
                 color: var(--accent-color-two);
                 font-size: 34px;
-                font-family: Righteous, sans-serif;
+                font-family: var(--font-title);
             }
 
             .podcast-about__title__text {
-                color: var(--podcast-text-color);
+                color: var(--text-general-color);
                 margin: 25px 0 0 0;
                 text-transform: uppercase;
                 text-align: justify;
@@ -35,7 +35,7 @@
 
         .podcast-about__text {
             width: 58%;
-            color: var(--podcast-text-color);
+            color: var(--text-general-color);
             padding: 0 20px 0 20px;
         }
     }
@@ -50,7 +50,7 @@
 
         .podcast-about__episodes__title {
             width: 42%;
-            color: var(--podcast-text-color);
+            color: var(--text-general-color);
             padding: 0 20px 0 20px;
             text-transform: uppercase;
             font-weight: bold;
@@ -64,7 +64,7 @@
 
             .podcast-about__episodes__item {
                 .item__meta {
-                    color: var(--podcast-title-color);
+                    color: var(--text-title-color);
                     font-size: 15px;
                     font-weight: bold;
                     margin: 0 0 16px 0;
@@ -121,7 +121,7 @@
 
                 .item__about {
                     margin: 25px 0 0 0;
-                    color: var(--podcast-text-color);
+                    color: var(--text-general-color);
                 }
 
                 .item__button {
@@ -153,7 +153,6 @@
                         );
                         cursor: pointer;
                     }
-                    /**/
 
                     .item__button-icon {
                         position: relative;
@@ -168,7 +167,6 @@
                 }
             }
         }
-
     }
 }
 
