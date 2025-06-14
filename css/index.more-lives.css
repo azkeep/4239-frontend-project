@@ -52,7 +52,7 @@
             margin: 20px 0 0 0;
             color: var(--text-title-color);
             font-size: 38px;
-            font-family: var(--font-title), var(--font-generic);
+            font-family: var(--font-title);
 
         }
 
