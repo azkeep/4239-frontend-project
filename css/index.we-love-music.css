@@ -7,7 +7,12 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 40px;
+    padding: 60px 24px;
+
+    @media (min-width: 1024px) {
+        padding: 60px 40px;
+    }
+
 
     .wlm-motto {
         .wlm-motto-block{
@@ -26,10 +31,14 @@
 
         .wlm-message {
             margin: 20px 0 0 0;
-            font-size: 68px;
+            font-size: 56px;
             color: var(--text-title-color);
             font-family: Righteous, sans-serif;
             font-weight: 400;
+
+            @media (min-width: 1024px) {
+                font-size: 68px;
+            }
 
             .wlm-message-accent-one {
                 color: var(--accent-color-one);
