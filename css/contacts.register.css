@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 50px;
 
     .contacts__main-info {
       flex: 1 1 40%;
@@ -58,7 +59,14 @@
         margin-left: -70px;
 
         .contacts__icon {
-          width: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 70px;
+          border: 2px solid var(--border-color);
+          border-radius: 50%;
+          background-color: #2b2b48;
         }
 
         .contacts__label-container {
@@ -75,10 +83,10 @@
             font-family: "Noto Sans", sans-serif;
           }
 
-          .contacts__links{
+          .contacts__links {
             font-family: "Noto Sans", sans-serif;
             font-size: 16px;
-            color:var(--text-general-color)
+            color: var(--text-general-color);
           }
         }
       }
@@ -110,6 +118,7 @@
       max-width: 440px;
       padding-top: 25px;
       padding-bottom: 25px;
+      margin-top: 15px;
       margin-left: 100px;
       margin-right: -110px;
 
