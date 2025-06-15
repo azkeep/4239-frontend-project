@@ -1,87 +1,89 @@
 .testimonials {
-    .testimonials__header-text {
-        .testimonials__intro {
+  .testimonials__header-text {
+    .testimonials__intro {
+      .testimonials__star {
+        font-size: 38px;
+        color: orangered;
+        margin-left: 12px;
+      }
 
-            .testimonials__star {
-                font-size: 38px;
-                color: orangered;
-            }
-
-            .testimonials__title {
-                font-size: 12px;
-                text-transform: uppercase;
-                padding-top: 0;
-                padding-right: 0;
-                padding-bottom: 10px;
-                color: var(--text-color);
-                font-weight: bold;
-                font-family: "Noto Sans", sans-serif;
-            }
-        }
-
-        @media (min-width:767px) {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        .testimonials__description {
-            font-size: 18px;
-            color: var(--text-color);
-            padding: 0 10px 0 10px;
-            font-family: "Noto Sans", sans-serif;
-        }
-
+      .testimonials__title {
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 10px;
+        color: var(--text-color);
+        font-family: "Noto Sans", sans-serif;
+        margin-left: 12px;
+      }
     }
 
-    .testimonials__border-line {
-        border: 1px solid var(--border-color);
-        margin: 15px 70px;
+    @media (min-width: 767px) {
+      padding: 0;
+      margin-left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
 
-    .testimonials__list {
-        display: grid;
-
-        @media (min-width:767px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .testimonial__info {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 50%;
-
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-
-            .testimonial__avatar {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            .testimonial__content {
-                display: flex;
-                flex-direction: column;
-
-                .testimonial__text {
-                    font-family: "Noto Sans", sans-serif;
-                    color: var(--text-color);
-                    margin-bottom: 0.5rem;
-                }
-
-                .testimonial__author {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-family: "Noto Sans", sans-serif;
-                    font-size: 12px;
-                    align-self: flex-start;
-                }
-            }
-
-        }
+    .testimonials__description {
+      font-size: 18px;
+      color: var(--text-title-color);
+      font-weight: bold;
+      padding: 0 10px 0 10px;
+      font-family: "Noto Sans", sans-serif;
     }
+  }
+
+  .testimonials__border-line {
+    border: 1px solid var(--border-color);
+    margin: 15px 70px;
+  }
+
+  .testimonials__list {
+    display: grid;
+
+    @media (min-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial__info {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+
+      .testimonial__avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .testimonial__content {
+        display: flex;
+        flex-direction: column;
+
+        .testimonial__text {
+          font-family: "Noto Sans", sans-serif;
+          color: var(--text-color);
+          margin-bottom: 0.5rem;
+        }
+
+        .testimonial__author {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: "Noto Sans", sans-serif;
+          font-size: 12px;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
 }
