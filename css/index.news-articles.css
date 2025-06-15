@@ -17,47 +17,42 @@
     font-weight: 400;
     font-size: inherit;
     color: var(--title-color);
-    }
+}
 
 .news__subtitle {
     font: var(--font-regular);
-    font-size: 500;
+    font-weight: 500;
     color: var(--text-general-color);
 }
 
-.news__item {
-    .news__image {
+.news__meta {
+    font: var(--font-regular);
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--accent-color-three);
+}
 
-    }
-    .news__meta {
-        font: var(--font-regular);
-        font-weight: 700;
-        font-size: 12px;
-        font-color: var(--accent-color-three);
-    }
+.news__headline {
+    font: var(--font-regular);
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--text-title-color);
+}
 
-    .news__headline {
-        font: var(--font-regular);
-        font-weight: 600;
-        font-size: 23px;
-        font-color: var(--text-title-color);
-    }
+.news__excerpt {
+    font: var(--font-regular);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-general-color);
+}
 
-    .news__excerpt {
-        font: var(--font-regular);
-        font-weight: 400;
-        font-size: 16px;
-        font-color: var(--text-general-color);
-    }
+.news__link {
+    font: var(--font-regular);
+    font-weight: 700;
+    color: var(--title-color);
+}
 
-    .news__link {
-        font-style: (--font-regular);
-        font-weight: 700
-        color: var(--title-color);
-
-        &:hover {
-            text-decoration: underline;
-            text-color: #fe226a;
-        }
-    }
+.news__link:hover {
+    text-decoration: underline;
+    color: #fe226a;
 }
