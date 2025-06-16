@@ -52,11 +52,18 @@
   --accent-color-three:#FF7433;
   --accent-color-four:#4858F9;
 
-  --podcast-title-color:#ffffff;
-  --podcast-text-color:#cccccc;
+  --text-title-color:#ffffff;
+  --text-general-color:#cccccc;
 
-  --popular-artists-title-color:#ffffff;
-  --popular-artists-text-color:#cccccc;
+  --title-color: white;
+  --text-color: #DBDBDB;
+
+  --font-title: 'Righteous', sans-serif;
+  --font-regular: 'Noto Sans', sans-serif;
+
+  --border-color: #31323f;
+  --button-color: white;
+  --button-background-color: #7f00fc;
 }
 
 /* Плавні анімації по замовчуванню */
@@ -93,21 +100,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-/* основний колір та шрифт */
-body {
-  color: #fff;
-  /* або white */
-  font-family: 'Noto Sans', sans-serif;
-}
-
-:root {
-  --title-color: white;
-  --text-color: #DBDBDB;
-  --border-color: #31323f;
-  --button-color: white;
-  --button-background-color: #7f00fc;
+  /*-----------------------------------------------------*/
+  color: #ffffff;
+  font-family: var(--font-regular);
 }
 
 /* клас який обмежує ширину контентної частини*/

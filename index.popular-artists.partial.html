@@ -2,8 +2,8 @@
 
 <!--
 TODO:
-    - add side buttons for carousel;
-    - use js to animate the carousel;
+    - change JS script for a proper loop;
+    - change CSS properties for proper scaling;
 -->
 
 <section class="popular-artists__container">
@@ -18,80 +18,110 @@ TODO:
         </svg>
     </div>
 
-    <div class="popular-artists__carousel">
+    <div class="popular-artists__carousel__wrapper">
 
-        <ul class="popular-artists__carousel__list">
+        <button class="popular-artists__carousel-button-prev">&#8249;</button>
 
-            <li class="popular-artists__carousel__item">
-                <div class="item__image-block">
-                    <img src="img/index/popular-artists/guitar-boy-blue.webp" class="item__image" alt="John Echo"/>
-                </div>
-                <div class="item__info">
-                    <p class="item__info__name">John Echo</p>
-                    <span class="item__info__line">
-                        <span class="item__info__line line-one"></span>
-                    </span>
-                    <p class="item__info__location">New York</p>
-                </div>
-            </li>
+        <div class="popular-artists__carousel">
 
-            <li class="popular-artists__carousel__item">
-                <div class="item__image-block">
-                    <img src="img/index/popular-artists/hustler-graffiti.webp" class="item__image"
-                         alt="Electric Mirage"/>
-                </div>
-                <div class="item__info">
-                    <p class="item__info__name">Electric Mirage</p>
-                    <span class="item__info__line">
-                        <span class="item__info__line line-two"></span>
-                    </span>
-                    <p class="item__info__location">Puerto Rico</p>
-                </div>
-            </li>
+            <ul class="popular-artists__carousel__list">
 
-            <li class="popular-artists__carousel__item">
-                <div class="item__image-block">
-                    <img src="img/index/popular-artists/girls-orange-blue.webp" class="item__image" alt="Serenade"/>
-                </div>
-                <div class="item__info">
-                    <p class="item__info__name">Serenade</p>
-                    <span class="item__info__line">
-                        <span class="item__info__line line-three"></span>
-                    </span>
-                    <p class="item__info__location">San Francisco</p>
-                </div>
-            </li>
+                <li class="popular-artists__carousel__item" id="popularArtist01">
+                    <div class="item__image-block">
+                        <img src="img/index/popular-artists/guitar-boy-blue.webp" class="item__image" alt="John Echo"/>
+                    </div>
+                    <div class="item__info">
+                        <p class="item__info__name">John Echo</p>
+                        <span class="item__info__line">
+                            <span class="item__info__line line-one"></span>
+                        </span>
+                        <p class="item__info__location">New York</p>
+                    </div>
+                </li>
 
-            <li class="popular-artists__carousel__item">
-                <div class="item__image-block">
-                    <img src="img/index/popular-artists/drummer-orange.webp" class="item__image" alt="Hurricane"/>
-                </div>
-                <div class="item__info">
-                    <p class="item__info__name">Hurricane</p>
-                    <span class="item__info__line">
-                        <span class="item__info__line line-four"></span>
-                    </span>
-                    <p class="item__info__location">Vienna</p>
-                </div>
-            </li>
+                <li class="popular-artists__carousel__item">
+                    <div class="item__image-block">
+                        <img src="img/index/popular-artists/hustler-graffiti.webp" class="item__image"
+                             alt="Electric Mirage"/>
+                    </div>
+                    <div class="item__info">
+                        <p class="item__info__name">Electric Mirage</p>
+                        <span class="item__info__line">
+                            <span class="item__info__line line-two"></span>
+                        </span>
+                        <p class="item__info__location">Puerto Rico</p>
+                    </div>
+                </li>
 
-            <!-- Hide temporary before we make carousel script
-            <li>
-                <div class="item__image-block">
-                    <img src="img/index/popular-artists/girl-red.webp" class="item__image" alt="boy-blue"/>
-                </div>
-                <div class="item__info">
-                    <p class="item__info__name">Velvet Skyline</p>
-                    <span class="item__info__line">
-                        <span class="item__info__line line-four"></span>
-                    </span>
-                    <p class="item__info__location">Washington</p>
-                </div>
+                <li class="popular-artists__carousel__item">
+                    <div class="item__image-block">
+                        <img src="img/index/popular-artists/girls-orange-blue.webp" class="item__image" alt="Serenade"/>
+                    </div>
+                    <div class="item__info">
+                        <p class="item__info__name">Serenade</p>
+                        <span class="item__info__line">
+                            <span class="item__info__line line-three"></span>
+                        </span>
+                        <p class="item__info__location">San Francisco</p>
+                    </div>
+                </li>
 
-            </li>
-            -->
+                <li class="popular-artists__carousel__item">
+                    <div class="item__image-block">
+                        <img src="img/index/popular-artists/drummer-orange.webp" class="item__image" alt="Hurricane"/>
+                    </div>
+                    <div class="item__info">
+                        <p class="item__info__name">Hurricane</p>
+                        <span class="item__info__line">
+                                            <span class="item__info__line line-four"></span>
+                                        </span>
+                        <p class="item__info__location">Vienna</p>
+                    </div>
+                </li>
 
-        </ul>
+                <li class="popular-artists__carousel__item">
+                    <div class="item__image-block">
+                        <img src="img/index/popular-artists/girl-red.webp" class="item__image" alt="Velvet Skyline"/>
+                    </div>
+                    <div class="item__info">
+                        <p class="item__info__name">Velvet Skyline</p>
+                        <span class="item__info__line">
+                                            <span class="item__info__line line-four"></span>
+                                        </span>
+                        <p class="item__info__location">Washington</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <button class="popular-artists__carousel-button-next">&#8250;</button>
 
     </div>
+
+    <script>
+
+        const popularArtistsContainer = [...document.querySelectorAll('.popular-artists__carousel')];
+        const slideNext = [...document.querySelectorAll('.popular-artists__carousel-button-next')];
+        const slidePrev = [...document.querySelectorAll('.popular-artists__carousel-button-prev')];
+        const artistCard = document.getElementById('popularArtist01');
+        const artistCardStyle = window.getComputedStyle(artistCard);
+
+        let artistCardPadding = parseInt(artistCardStyle.getPropertyValue('padding-right'));
+        let artistCardWidth = artistCard.getBoundingClientRect().width;
+
+        popularArtistsContainer.forEach((item, i) => {
+            slideNext[i].addEventListener('click', () => {
+                item.scrollLeft += (artistCardWidth + artistCardPadding);
+            })
+
+            slidePrev[i].addEventListener('click', () => {
+                item.scrollLeft -= (artistCardWidth - artistCardPadding);
+            })
+        })
+
+    </script>
+
+
 </section>

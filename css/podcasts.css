@@ -1,3 +1,6 @@
 @import "global.css";
-@import "podcasts.radio-app.css";
-@import "podcasts-about.css";
+@import "global.nav.css";               /* Hrabar Yana      */
+/* insert podcast blocks    */
+@import "podcasts.radio-app.css";       /* Andrii Kovalyk   */
+@import "podcasts-about.css";           /* Oleksandr Braiko */
+/*  insert footer           */

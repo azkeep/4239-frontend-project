@@ -9,92 +9,128 @@
     padding: 0;
 
     .popular-artists__title {
-        font-family: Righteous, sans-serif;
+        font-family: var(--font-title);
         font-size: 38px;
-        color: var(--popular-artists-title-color);
+        color: var(--text-title-color);
+        padding: 0 32px;
     }
 
     .popular-artists__divider {
+        padding: 0 32px;
         margin: 0;
     }
 
-    .popular-artists__carousel {
-        margin: 50px 0 0 0;
-        padding: 0 20px 0 20px;
+    .popular-artists__carousel__wrapper {
         display: flex;
+        flex-direction: row;
 
-        .popular-artists__carousel__list {
-            list-style: none;
-            align-items: center;
-            justify-content: space-around;
-            display: grid;
-            gap: 0;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        .popular-artists__carousel-button-prev,
+        .popular-artists__carousel-button-next {
+            background: none;
+            border: none;
+            color: var(--text-general-color);
+            font-size: 36px;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s;
+            z-index: 2;
 
-            .popular-artists__carousel__item {
-                padding: 0 15px 0 15px;
-                margin: 0;
-                display: inline-block;
-                min-width: 260px;
+            &:hover {
+                color: white;
+            }
 
-                .item__image-block {
+            @media (max-width: 1200px) {
+                color: var(--text-general-color);
+            }
+        }
 
-                    .item__image {
-                        object-fit: cover;
-                        aspect-ratio: 1;
-                        width: 100%;
-                        display: inline-block;
-                    }
-                }
+        .popular-artists__carousel {
+            margin: 50px 0 0 0;
+            padding: 0 20px 0 20px;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            overflow: hidden;
+            width: 100%;
+            scroll-behavior: smooth;
 
-                .item__info {
-                    font-family: "Noto Sans", sans-serif;
+            .popular-artists__carousel__list {
+                list-style: none;
+                align-items: center;
+                justify-content: space-around;
+                display: flex;
+                flex-direction: row;
+                overflow-x: clip;
+                overflow-clip-margin: unset;
 
-                    .item__info__name {
-                        margin: 20px 0 0 0;
-                        font-size: 24px;
-                        color: var(--popular-artists-title-color);
-                    }
+                /* old grid for proper images scaling per resolution */
+                /*display: grid;*/
+                /*gap: 0;*/
+                /*grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));*/
 
-                    .item__info__line {
-                        display: block;
-                        width: 37px;
-                        height: 34px;
+                .popular-artists__carousel__item {
+                    padding: 0 15px 0 15px;
+                    margin: 0;
+                    display: inline-block;
+                    min-width: 260px;
+                    flex-shrink: 0;
 
-                        .line-one {
-                            position: relative;
-                            top: 15px;
-                            height: 4px;
-                            background-color: var(--accent-color-one);
+                    .item__image-block {
+
+                        .item__image {
+                            object-fit: cover;
+                            aspect-ratio: 1;
+                            display: inline-block;
+                            max-width: 240px;
                         }
-
-                        .line-two {
-                            position: relative;
-                            top: 15px;
-                            height: 4px;
-                            background-color: var(--accent-color-two);
-                        }
-
-                        .line-three {
-                            position: relative;
-                            top: 15px;
-                            height: 4px;
-                            background-color: var(--accent-color-three);
-                        }
-
-                        .line-four {
-                            position: relative;
-                            top: 15px;
-                            height: 4px;
-                            background-color: var(--accent-color-four);
-                        }
-
                     }
 
-                    .item__info__location {
-                        height: 34px;
-                        font-size: 16px;
-                        color: var(--popular-artists-text-color);
+                    .item__info {
+
+                        .item__info__name {
+                            margin: 20px 0 0 0;
+                            font-size: 24px;
+                            color: var(--text-title-color);
+                        }
+
+                        .item__info__line {
+                            display: block;
+                            width: 37px;
+                            height: 34px;
+
+                            .line-one {
+                                position: relative;
+                                top: 15px;
+                                height: 4px;
+                                background-color: var(--accent-color-one);
+                            }
+
+                            .line-two {
+                                position: relative;
+                                top: 15px;
+                                height: 4px;
+                                background-color: var(--accent-color-two);
+                            }
+
+                            .line-three {
+                                position: relative;
+                                top: 15px;
+                                height: 4px;
+                                background-color: var(--accent-color-three);
+                            }
+
+                            .line-four {
+                                position: relative;
+                                top: 15px;
+                                height: 4px;
+                                background-color: var(--accent-color-four);
+                            }
+                        }
+
+                        .item__info__location {
+                            height: 34px;
+                            font-size: 16px;
+                            color: var(--text-general-color);
+                        }
                     }
                 }
             }
