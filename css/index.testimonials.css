@@ -1,17 +1,18 @@
 .testimonials {
   .testimonials__header-text {
-
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50%;
-    
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 70px;
 
     .testimonials__intro {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       .testimonials__star {
         font-size: 38px;
         color: orangered;
-        margin-left: 12px;
+        margin-left: 0;
       }
 
       .testimonials__title {
@@ -23,16 +24,16 @@
         padding-bottom: 10px;
         color: var(--text-color);
         font-family: "Noto Sans", sans-serif;
-        margin-left: 12px;
+        margin-left: 0;
       }
     }
 
-    @media (max-width:780px) {      
+    @media (max-width: 780px) {
       display: flex;
       flex-direction: column;
-      padding: 0;
-      margin: 0;
-      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0 15px;
     }
 
     .testimonials__description {
@@ -59,7 +60,7 @@
     .testimonial__info {
       margin-left: auto;
       margin-right: auto;
-      max-width: 70%;
+      max-width: 65%;
 
       display: flex;
       gap: 1rem;
