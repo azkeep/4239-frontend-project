@@ -106,5 +106,5 @@
 @media (max-width: 768px) {
   .latest-podcasts__intro {
     display: block;
-  }
+    padding: 60px 15px 30px;
 }
