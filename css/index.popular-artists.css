@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
     padding: 0;
 
     .popular-artists__title {
@@ -23,9 +24,10 @@
     .popular-artists__carousel__wrapper {
         display: flex;
         flex-direction: row;
+        max-width: 1170px;
+        position: relative;
 
-        .popular-artists__carousel-button-prev,
-        .popular-artists__carousel-button-next {
+        .popular-artists__carousel-button {
             background: none;
             border: none;
             color: var(--text-general-color);
@@ -39,28 +41,27 @@
                 color: white;
             }
 
-            @media (max-width: 1200px) {
+            @media (max-width: 1170px) {
                 color: var(--text-general-color);
             }
         }
 
         .popular-artists__carousel {
             margin: 50px 0 0 0;
-            padding: 0 20px 0 20px;
+            padding: 0 20px;
             display: flex;
-            transition: transform 0.5s ease-in-out;
             overflow: hidden;
             width: 100%;
             scroll-behavior: smooth;
 
             .popular-artists__carousel__list {
+                max-width: 1170px;
                 list-style: none;
                 align-items: center;
                 justify-content: space-around;
                 display: flex;
                 flex-direction: row;
-                overflow-x: clip;
-                overflow-clip-margin: unset;
+                transition: transform 0.5s ease-in-out;
 
                 /* old grid for proper images scaling per resolution */
                 /*display: grid;*/

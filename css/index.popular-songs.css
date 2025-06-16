@@ -1,0 +1,79 @@
+/* === BASE (Mobile First) === */
+.popular-songs {
+  padding: 40px 16px;
+  background-color: #1a1b29;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.popular-songs__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.popular-songs__image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.popular-songs__text {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.popular-songs__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #e100ff;
+  margin-bottom: 8px;
+}
+
+.popular-songs__description {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.popular-songs__highlight {
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: underline;
+  color: #7f00ff;
+}
+
+/* === TABLET & DESKTOP === */
+@media (min-width: 768px) {
+  .popular-songs__container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .popular-songs__text {
+    padding: 0 20px;
+  }
+
+  .popular-songs__label {
+    font-size: 14px;
+  }
+
+  .popular-songs__description {
+    font-size: 18px;
+  }
+}
