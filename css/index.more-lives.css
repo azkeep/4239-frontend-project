@@ -25,13 +25,13 @@
         max-width: 100%;
         margin: 0;
 
-        @media (min-width: 770px) {
+        @media (min-width: 768px) {
             max-width: 430px;
         }
 
         .more-lives__play-circle {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             background-image: linear-gradient(
                     135deg,
@@ -41,18 +41,33 @@
             vertical-align: bottom;
             text-align: center;
 
+            @media (min-width: 768px) {
+                width: 100px;
+                height: 100px;
+            }
+
             .more-lives__play-icon {
-                margin: 20px 0;
-                width: 60px;
-                height: 60px;
+                margin: 15px 0;
+                width: 40px;
+                height: 40px;
+
+                @media (min-width: 768px) {
+                    margin: 20px 0;
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
 
         .more-lives__title {
             margin: 20px 0 0 0;
             color: var(--text-title-color);
-            font-size: 38px;
+            font-size: 30px;
             font-family: var(--font-title);
+
+            @media (min-width: 768px) {
+                font-size: 38px;
+            }
 
         }
 
