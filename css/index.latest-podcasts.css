@@ -101,10 +101,9 @@
   .latest-podcasts__list {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 768px) {
   .latest-podcasts__intro {
     display: block;
     padding: 60px 15px 30px;
+  }
 }
