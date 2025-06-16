@@ -33,16 +33,53 @@
             color: var(--text-general-color);
             font-size: 36px;
             cursor: pointer;
-            padding: 10px;
+            padding: 0;
+            /*padding: 10px;*/
             transition: color 0.3s;
             z-index: 2;
 
-            &:hover {
-                color: white;
+            .popular-artists__carousel-button-icon-prev {
+                color: var(--text-general-color);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                transition: color 0.3s;
+                transform:scaleX(-1);
+
+                &:hover {
+                    color: var(--text-title-color);
+                }
+
+                @media (max-width: 1024px) {
+                    position:relative;
+                    left:48px;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                    background-color: rgba(0,0,0,0.8);
+                }
             }
 
-            @media (max-width: 1170px) {
+            .popular-artists__carousel-button-icon-next {
                 color: var(--text-general-color);
+                transform:scaleX(1);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--text-title-color);
+                }
+
+                @media (max-width: 1024px) {
+                    position:relative;
+                    right:12px;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                    background-color: rgba(0,0,0,0.8);
+                }
             }
         }
 
