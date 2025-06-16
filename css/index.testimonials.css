@@ -1,5 +1,12 @@
 .testimonials {
   .testimonials__header-text {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50%;
+    
+
     .testimonials__intro {
       .testimonials__star {
         font-size: 38px;
@@ -20,12 +27,12 @@
       }
     }
 
-    @media (max-width: 767px) {
-      padding: 0;
-      margin-left: 0;
+    @media (max-width:780px) {      
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      text-align: left;
     }
 
     .testimonials__description {
