@@ -15,8 +15,7 @@
 @import 'index.testimonials.css';           /* Petykchachnyi Olexii */
 @import 'index.more-lives.css';             /* Oleksandr Braiko */
 @import 'index.news-articles.css';          /* Yana Baidatska */
-/*  insert news-articles    */
-/*  insert footer           */
+@import "global.footer.css";                /* Oleksandr Braiko */
 
 /*@import 'about-us.vision-mission.css';*/
 /*@import 'about-us.join-community.css';*/
