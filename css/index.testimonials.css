@@ -2,13 +2,10 @@
   .testimonials__header-text {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    padding: 0 70px;
+    align-items: center;
+    gap: 2rem;
 
     .testimonials__intro {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       .testimonials__star {
         font-size: 38px;
         color: orangered;
@@ -19,29 +16,23 @@
         font-weight: bold;
         font-size: 12px;
         text-transform: uppercase;
-        padding-top: 0;
-        padding-right: 0;
         padding-bottom: 10px;
         color: var(--text-color);
         font-family: "Noto Sans", sans-serif;
-        margin-left: 0;
       }
-    }
-
-    @media (max-width: 780px) {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 0 15px;
     }
 
     .testimonials__description {
       font-size: 18px;
       color: var(--text-title-color);
-      font-weight: bold;
-      padding: 0 10px 0 10px;
       font-family: "Noto Sans", sans-serif;
+    }
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      padding: 0 15px;
     }
   }
 
