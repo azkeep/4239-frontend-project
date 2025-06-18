@@ -3,5 +3,5 @@
 @import "podcasts.header-hero.css";     /* Oleksandr Braiko */
 /* insert podcast blocks    */
 @import "podcasts.radio-app.css";       /* Andrii Kovalyk   */
-@import "podcasts-about.css";           /* Oleksandr Braiko */
+@import "podcasts.about.css";           /* Oleksandr Braiko */
 @import "global.footer.css";            /* Oleksandr Braiko */
