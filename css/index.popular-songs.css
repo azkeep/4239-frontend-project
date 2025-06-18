@@ -1,43 +1,48 @@
 .popular-songs {
-  padding: 40px 16px;
-  background-color: #1a1b29;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.2px;
-
+  padding: 60px 16px;
+  background-color: #0d0d1b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  font-family: 'Inter', sans-serif;
   text-align: center;
+  gap: 32px;
 }
 
-.popular-songs__media,
-.popular-songs__caption {
-  max-width: 600px;
+.popular-songs__media {
+  border: 6px solid #1f1f2e;
+  padding: 8px;
+  background-color: #1f1f2e;
+  border-radius: 4px;
+  max-width: 900px;
   width: 100%;
 }
 
 .popular-songs__image {
   width: 100%;
-  border-radius: 8px;
+  display: block;
+  border-radius: 2px;
   object-fit: cover;
 }
 
+.popular-songs__caption {
+  max-width: 700px;
+  color: #ffffff;
+}
+
 .popular-songs__category {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  font-weight: 600;
   color: #e100ff;
   margin-bottom: 8px;
+  display: inline-block;
 }
 
 .popular-songs__description {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.6;
   color: #ffffff;
 }
 
@@ -47,28 +52,17 @@
   color: #7f00ff;
 }
 
-/* === DESKTOP === */
+
 @media (min-width: 768px) {
   .popular-songs {
-    flex-direction: row;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .popular-songs__media,
-  .popular-songs__caption {
-    max-width: 50%;
-  }
-
-  .popular-songs__caption {
-    padding: 0 32px;
-  }
-
-  .popular-songs__category {
-    font-size: 14px;
+    padding: 80px 40px;
   }
 
   .popular-songs__description {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .popular-songs__category {
+    font-size: 16px;
   }
 }
