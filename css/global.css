@@ -56,7 +56,7 @@
   --text-general-color:#cccccc;
 
   --text-color-title:#ffffff;
-  --text-color-primary:#dbdbdb;
+  --text-color-primary:#dbdbdb, rgb(219,219,219);
   --text-color-secondary:#cccccc;
 
   --title-color: white;

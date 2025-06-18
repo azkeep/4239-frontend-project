@@ -10,7 +10,7 @@
 @import 'index.listen.css';                 /* Oleksandr Braiko */
 /*  insert results          */
 /*  insert join-us          */
-/*  insert program          */
+@import "index.program.partial.css";        /* Vladyslava Shcherbyna */
 @import 'index.popular-artists.css';        /* Oleksandr Braiko */
 @import 'index.we-love-music.css';          /* Oleksandr Braiko */
 @import 'index.testimonials.css';           /* Petykchachnyi Olexii */
