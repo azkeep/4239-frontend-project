@@ -55,15 +55,25 @@
   --text-title-color:#ffffff;
   --text-general-color:#cccccc;
 
+  --text-color-title:#ffffff;
+  --text-color-primary:#dbdbdb;
+  --text-color-secondary:#cccccc;
+
   --title-color: white;
   --text-color: #DBDBDB;
 
   --font-title: 'Righteous', sans-serif;
   --font-regular: 'Noto Sans', sans-serif;
 
+  --icon-bg-normal-color:#9500FF;
+  --icon-bg-hover-color:#B230FF;
+
+  --footer-bg-color:#151622;
+
   --border-color: #31323f;
   --button-color: white;
   --button-background-color: #7f00fc;
+
 }
 
 /* Плавні анімації по замовчуванню */

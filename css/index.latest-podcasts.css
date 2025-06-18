@@ -30,7 +30,6 @@
 }
 
 .latest-podcasts__item {
-  overflow: hidden;
   width: 100%;
 }
 
@@ -85,7 +84,9 @@
 .podcast-card__button {
   display: inline-block;
   padding: 12px 24px;
-  width: 150px;
+  min-width: 150px;
+  width: fit-content;
+  max-width: 100%;
   background-color: #000;
   color: #fff;
   border-radius: 8px;
@@ -101,10 +102,9 @@
   .latest-podcasts__list {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 768px) {
   .latest-podcasts__intro {
     display: block;
     padding: 60px 15px 30px;
+  }
 }
