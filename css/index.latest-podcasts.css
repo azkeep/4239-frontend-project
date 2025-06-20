@@ -8,11 +8,11 @@
   display: flex;
   justify-content: space-between;
   padding: 100px 30px 40px;
-  Font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .latest-podcasts__label {
-  color:rgb(196, 194, 194);
+  color: rgb(196, 194, 194);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -87,15 +87,23 @@
   min-width: 150px;
   width: fit-content;
   max-width: 100%;
-  background-color: #000;
-  color: #fff;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  color: var(--text-title-color);
+  background-image: linear-gradient(
+    45deg,
+    var(--accent-color-one),
+    var(--accent-color-four)
+  );
 }
 
 .podcast-card__button:hover {
-  background-color: #444;
+  background-image: linear-gradient(
+    45deg,
+    var(--accent-color-four),
+    var(--accent-color-one)
+  );
 }
 
 @media (max-width: 768px) {
