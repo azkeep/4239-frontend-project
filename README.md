@@ -41,5 +41,6 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Viktoriia Remeniuk
 - Pavlo Demchenko
 - Mark Kozhydlo
+- Dmytro Chornobryvets
 - Maksym Oleksiv
 - Vladyslava Shcherbyna
