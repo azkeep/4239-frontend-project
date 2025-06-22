@@ -1,10 +1,7 @@
 /*Vladyslava Shcherbyna*/
-/* ========================================================================== */
-/* CSS Variables (Користувацькі властивості CSS)                   */
-/* ========================================================================== */
 :root {
   --font-regular: 'Noto Sans', sans-serif;
-  --body-bg-solid: #1a1e2b;
+  --body-bg-solid: #1a1b29; /* Змінено на новий колір */
   --text-color-title: #fff;
   --text-color-light-gray: #DBDBDB;
   --accent-color-four: #4858F9;
@@ -15,10 +12,7 @@
   --padding-horizontal: 30px;
 }
 
-/* ========================================================================== */
-/* Base Styles (Базові стилі для всього документа)                 */
-/* ========================================================================== */
-html, body {
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -28,18 +22,8 @@ body {
   color: var(--text-color-title);
   font-family: var(--font-regular);
   line-height: 1.5;
-  
-  background: 
-    linear-gradient(rgba(26, 30, 43, 0.7), rgba(26, 30, 43, 0.7)), 
-    url('path/to/your/desktop-background-image.jpg') 
-    center center / cover no-repeat fixed;
-  
-  background-color: var(--body-bg-solid);
 }
 
-/* ========================================================================== */
-/* Container Styles (Стилі для основного контейнера)               */
-/* ========================================================================== */
 .container {
   max-width: var(--content-max-width);
   margin: 0 auto;
@@ -50,9 +34,6 @@ body {
   border-radius: 0;
 }
 
-/* ========================================================================== */
-/* Program Info Section (Секція "Daily Program" заголовок)        */
-/* ========================================================================== */
 .program-info {
     display: flex;
     justify-content: space-between;
@@ -107,9 +88,6 @@ body {
   left: 0px;
 }
 
-/* ========================================================================== */
-/* Desktop Grid Layout (Сітка програм для десктопу)                */
-/* ========================================================================== */
 .program-grid {
     display: grid;
     grid-template-columns: 150px repeat(5, 1fr); 
@@ -131,30 +109,23 @@ body {
     border-bottom: 1px solid var(--feature-element-bg-color);
 }
 
-/* Стилі для заголовків колонок (перший "Day/Time", інші - час) */
 .grid-header .grid-cell {
     background-color: var(--body-bg-solid);
     color: var(--accent-color-three);
     font-weight: 500;
     font-size: 0.95em; 
-    padding-left: 20px; /* Базовий відступ зліва для "Day/Time" */
+    padding-left: 20px; 
     border-top: none;
 }
 
-/* Стилі для комірок, що позначають день тижня */
 .grid-row .day-cell {
     font-weight: 500;
-    /* Спробуємо змінити padding-left ще раз. Можливо, 21px або 19px буде краще. */
-    /* Вам потрібно буде спробувати різні значення і подивитися на екрані. */
-    padding-left: 21px; /* Спробуємо трохи збільшити */
+    padding-left: 21px;
     color: var(--text-color-title);
     background-color: var(--body-bg-solid);
     font-size: 0.95em; 
 }
 
-/* ========================================================================== */
-/* Mobile Styles (Медіа-запити для мобільних пристроїв)             */
-/* ========================================================================== */
 @media screen and (max-width: 768px) {
   body {
     background: var(--body-bg-solid); 
