@@ -1,18 +1,58 @@
 /*Vladyslava Shcherbyna*/
-body {
-  color: #fff;
-  font-family: var(--font-regular);
-  background-color: var(--body-bg-solid);
-  padding: 0;
-  margin: 0;
+/* ========================================================================== */
+/* CSS Variables (Користувацькі властивості CSS)                   */
+/* ========================================================================== */
+:root {
+  --font-regular: 'Noto Sans', sans-serif;
+  --body-bg-solid: #1a1e2b;
+  --text-color-title: #fff;
+  --text-color-light-gray: #DBDBDB;
+  --accent-color-four: #4858F9;
+  --accent-color-three: #ff6f3c;
+  --feature-element-bg-color: #2e3245;
+  
+  --content-max-width: 1200px;
+  --padding-horizontal: 30px;
 }
 
-.container {
+/* ========================================================================== */
+/* Base Styles (Базові стилі для всього документа)                 */
+/* ========================================================================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-color-title);
+  font-family: var(--font-regular);
+  line-height: 1.5;
+  
+  background: 
+    linear-gradient(rgba(26, 30, 43, 0.7), rgba(26, 30, 43, 0.7)), 
+    url('path/to/your/desktop-background-image.jpg') 
+    center center / cover no-repeat fixed;
+  
   background-color: var(--body-bg-solid);
-  padding: 30px;
+}
+
+/* ========================================================================== */
+/* Container Styles (Стилі для основного контейнера)               */
+/* ========================================================================== */
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  background-color: var(--body-bg-solid);
+  padding: var(--padding-horizontal);
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-radius: 0;
 }
 
+/* ========================================================================== */
+/* Program Info Section (Секція "Daily Program" заголовок)        */
+/* ========================================================================== */
 .program-info {
     display: flex;
     justify-content: space-between;
@@ -20,15 +60,26 @@ body {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: wrap;
+}
+
+.program-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: auto;
+    order: 0;
 }
 
 .program-title {
     color: var(--text-color-title);
     font-size: 1em;
     font-weight: 500;
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-left: 0;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -40,55 +91,178 @@ body {
     max-width: 500px;
     line-height: 1.4;
     font-weight: 300;
+    width: auto;
+    flex-basis: auto;
+    order: 1;
+    margin-top: 0;
 }
 
 .star {
   color: var(--accent-color-four);
-  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-right: 0;
   font-size: 34px;
   position: relative;
   top: 0px;
   left: 0px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ========================================================================== */
+/* Desktop Grid Layout (Сітка програм для десктопу)                */
+/* ========================================================================== */
+.program-grid {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 1fr); 
+    width: 100%; 
+    border: none; 
+    margin: 0; 
 }
 
-th {
-  background-color: var(--body-bg-solid);
-  color: var(--accent-color-three);
-  padding: 15px 10px;
-  font-size: 1em;
-  text-align: center;
-  border-bottom: 1px solid var(--feature-element-bg-color);
-  font-weight: 500;
+.grid-header, .grid-row {
+    display: contents; 
 }
 
-td {
-  border-top: 1px solid var(--feature-element-bg-color);
-  border-bottom: 1px solid var(--feature-element-bg-color);
-  padding: 15px 10px;
-  text-align: center;
-  color: var(--text-color-title);
-  font-size: 0.95em;
-  font-weight: 400;
+.grid-cell {
+    padding: 15px 10px;
+    text-align: left;
+    color: var(--text-color-title);
+    font-size: 0.95em;
+    font-weight: 400;
+    border-bottom: 1px solid var(--feature-element-bg-color);
 }
 
-tr:nth-child(odd),
-tr:nth-child(even) {
-  background-color: var(--body-bg-solid);
+/* Стилі для заголовків колонок (перший "Day/Time", інші - час) */
+.grid-header .grid-cell {
+    background-color: var(--body-bg-solid);
+    color: var(--accent-color-three);
+    font-weight: 500;
+    font-size: 0.95em; 
+    padding-left: 20px; /* Базовий відступ зліва для "Day/Time" */
+    border-top: none;
 }
 
-td:first-child {
-  text-align: left;
-  font-weight: 500;
-  padding-left: 20px;
+/* Стилі для комірок, що позначають день тижня */
+.grid-row .day-cell {
+    font-weight: 500;
+    /* Спробуємо змінити padding-left ще раз. Можливо, 21px або 19px буде краще. */
+    /* Вам потрібно буде спробувати різні значення і подивитися на екрані. */
+    padding-left: 21px; /* Спробуємо трохи збільшити */
+    color: var(--text-color-title);
+    background-color: var(--body-bg-solid);
+    font-size: 0.95em; 
 }
 
-th:first-child {
-  text-align: left;
-  padding-left: 20px;
-  color: var(--text-color-title);
+/* ========================================================================== */
+/* Mobile Styles (Медіа-запити для мобільних пристроїв)             */
+/* ========================================================================== */
+@media screen and (max-width: 768px) {
+  body {
+    background: var(--body-bg-solid); 
+  }
+
+  .container {
+      max-width: 100%; 
+      padding: var(--padding-horizontal); 
+      padding-top: 30px; 
+      padding-bottom: 30px;
+  }
+
+  .program-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .program-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+      margin-right: auto;
+      order: 0;
+  }
+
+  .star {
+      margin-right: 0;
+      margin-bottom: 0px;
+      font-size: 30px;
+  }
+
+  .program-title {
+      margin-left: 0;
+  }
+
+  .program-description {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 1.2em;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .program-grid {
+    display: block; 
+    width: 100%; 
+    margin: 0; 
+  }
+
+  .grid-header {
+      display: none; 
+  }
+
+  .grid-row {
+      display: block; 
+      margin-bottom: 15px; 
+      border: 1px solid var(--feature-element-bg-color); 
+      border-radius: 5px;
+      overflow: hidden; 
+  }
+
+  .grid-row .day-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-bg-solid);
+    color: var(--text-color-title);
+    padding: 15px var(--padding-horizontal); 
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid var(--feature-element-bg-color);
+  }
+
+  .grid-row .day-cell::before {
+      content: "Day/Time";
+      color: var(--text-color-title);
+      font-weight: normal;
+      font-size: 14px;
+      margin-right: 10px;
+  }
+
+  .program-item {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center;
+    border: none;
+    padding: 10px var(--padding-horizontal); 
+    color: var(--text-color-title);
+    background-color: var(--body-bg-solid);
+    border-top: 1px solid var(--feature-element-bg-color);
+  }
+
+  .grid-row .day-cell + .program-item {
+      border-top: none;
+  }
+  
+  .program-item::before {
+    content: attr(data-label);
+    color: var(--accent-color-three);
+    font-weight: normal;
+    white-space: nowrap;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
 }
