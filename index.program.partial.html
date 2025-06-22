@@ -1,92 +1,86 @@
-<!--Vladyslava Shcherbyna -->
-
-<!--<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Program</title>
-    <link rel="stylesheet" href="/css/program.css">
-</head>
-
-<body> -->
-<section>
+<section class="program" id="program">
     <div class="container">
         <div class="program-info">
-            <div>
-                <span class="star">*</span> <span class="program-title">Daily Program</span>
+            <div class="program-heading">
+                <span class="star">*</span> <h1 class="program-title">Daily Program</h1>
             </div>
-            <p class="program-description">Here's a daily schedule of our shows and podcasts for you to navigate.</p>
+            <p class="program-description">
+                Here's a daily schedule of our shows and podcasts for you to navigate.
+            </p>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Day/Time</th>
-                    <th>12:00 PM - 2:00 PM</th>
-                    <th>12:00 PM - 2:00 PM</th>
-                    <th>4:00 PM - 8:00 PM</th>
-                    <th>10:00 PM - 11:00 PM</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>Morning Mix</td>
-                    <td>Lunch Beats</td>
-                    <td>Afternoon Flow</td>
-                    <td>Nightly Podcast</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>Jazz Jam</td>
-                    <td>Indie Showcase</td>
-                    <td>Pop Parade</td>
-                    <td>Genre Spotlight</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>Electro Vibes</td>
-                    <td>Throwback Hits</td>
-                    <td>Electronic Bliss</td>
-                    <td>Artist Interviews</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>Indie Grooves</td>
-                    <td>Hip-Hop Hour</td>
-                    <td>Blues Break</td>
-                    <td>Beats & Beyond</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Indie Spotlight</td>
-                    <td>Chart Toppers</td>
-                    <td>Friday Fiesta</td>
-                    <td>Mixtape Madness</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>Weekend Chill</td>
-                    <td>Saturday Mix</td>
-                    <td>Reggae Rhythms</td>
-                    <td>Nightly Podcast</td>
-                </tr>
-                <tr>
-                    <td>Sunday</td>
-                    <td>Acoustic Serenade</td>
-                    <td>Classical Escape</td>
-                    <td>Soundtrack Sundays</td>
-                    <td>Artist Interviews</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+        <div class="program-grid">
+            <div class="grid-header">
+                <div class="grid-cell">Day/Time</div>
+                <div class="grid-cell">12:00 PM - 2:00 PM</div>
+                <div class="grid-cell">2:00 PM - 4:00 PM</div>
+                <div class="grid-cell">4:00 PM - 6:00 PM</div>
+                <div class="grid-cell">6:00 PM - 8:00 PM</div>
+                <div class="grid-cell">8:00 PM - 10:00 PM</div>
+            </div>
 
-<!--
-</body>
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Monday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Morning Mix</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Midday Insights</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Afternoon Drive</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Evening Chill</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Late Night Talk</div>
+            </div>
 
-</html>
--->
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Tuesday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Tech Tuesday</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Healthy Habits</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Art Showcase</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Comedy Hour</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Mystery Thriller</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Wednesday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Wellness Wednesday</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Book Club</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Gaming Zone</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Cooking Show</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Documentary Night</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Thursday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Travelogue</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Science Discoveries</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Music Mashup</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Financial Focus</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">True Crime Stories</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Friday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Weekend Warmup</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Movie Reviews</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Sports Talk</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Live Concert</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Night Out Planner</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Saturday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Kids Zone</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">DIY Projects</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Garden Show</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Family Fun Time</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Board Game Night</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell day-cell">Sunday</div>
+                <div class="grid-cell program-item" data-label="12:00 PM - 2:00 PM">Sunday Brunch</div>
+                <div class="grid-cell program-item" data-label="2:00 PM - 4:00 PM">Relaxation Hour</div>
+                <div class="grid-cell program-item" data-label="4:00 PM - 6:00 PM">Nature's Wonders</div>
+                <div class="grid-cell program-item" data-label="6:00 PM - 8:00 PM">Classical Music</div>
+                <div class="grid-cell program-item" data-label="8:00 PM - 10:00 PM">Weekly Reflection</div>
+            </div>
+            
+        </div>
+        </section>
