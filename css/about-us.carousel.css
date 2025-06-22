@@ -1,8 +1,8 @@
 .timeline-carousel {
-	background-color: #131321;
+	background-color: var(--body-bg-solid-dark);
 	padding: 60px 20px;
 	color: white;
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--font-regular);
 	overflow: hidden;
 }
 
@@ -32,6 +32,8 @@
 }
 
 .carousel-item h2 {
+	font-family: var(--font-title);
+	font-weight: normal;
 	font-size: 36px;
 	margin-bottom: 10px;
 }
@@ -43,26 +45,26 @@
 }
 
 .purple {
-	background-color: #aa00ff;
+	background-color: var(--accent-color-one);
 }
 
 .orange {
-	background-color: #ff6a00;
+	background-color: var(--accent-color-three);
 }
 
 .blue {
-	background-color: #2962ff;
+	background-color: var(--accent-color-four);
 }
 
 .carousel-item p {
 	font-size: 16px;
-	color: #ccc;
+	color: var(--text-color-secondary);
 }
 
 .carousel-btn {
 	background: none;
 	border: none;
-	color: #aaa;
+	color: var(--text-color-secondary);
 	font-size: 36px;
 	cursor: pointer;
 	padding: 10px;
@@ -71,7 +73,7 @@
 }
 
 .carousel-btn:hover {
-	color: white;
+	color: var(--text-color-title);
 }
 
 @media (max-width: 768px) {

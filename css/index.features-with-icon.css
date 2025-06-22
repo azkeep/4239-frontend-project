@@ -13,7 +13,7 @@
   /*лінія яка відділяє блок від попереднього контенту*/
   display: block;
   height: 2px;
-  background-color: rgb(43, 43, 56);
+  background-color: var(--divider-line-color);
   margin-bottom: 30px;
 }
 
@@ -28,7 +28,7 @@
   /* Кругла рамка навколо іконки */
   width: 70px;
   height: 70px;
-  background-color: rgb(43, 43, 72);
+  background-color: var(--feature-element-bg-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -56,27 +56,27 @@
 
 .features-with-icon__title-underline--web-mobile {
   /* унікальний колір лінії */
-  background-color: rgb(225, 0, 255);
+  background-color: var(--accent-color-one);
 }
 
 .features-with-icon__title-underline--best-music {
   /* унікальний колір лінії */
-  background-color: rgb(255, 116, 51);
+  background-color: var(--accent-color-three);
 }
 
 .features-with-icon__title-underline--interesting-podcasts {
   /* унікальний колір лінії */
-  background-color: rgb(127, 0, 255);
+  background-color: var(--accent-color-two);
 }
 
 .features-with-icon__title-underline--fantastic-hosts {
   /* унікальний колір лінії */
-  background-color: rgb(72, 88, 249);
+  background-color: var(--accent-color-four);
 }
 
 .features-with-icon__description {
   /* Короткий опис фічі */
-  color: rgb(204, 204, 204);
+  color: var(--text-color-secondary);
   line-height: 24px;
 }
 

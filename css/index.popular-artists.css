@@ -12,7 +12,7 @@
     .popular-artists__title {
         font-family: var(--font-title);
         font-size: 38px;
-        color: var(--text-title-color);
+        color: var(--text-color-title);
         padding: 0 32px;
     }
 
@@ -30,7 +30,7 @@
         .popular-artists__carousel-button {
             background: none;
             border: none;
-            color: var(--text-general-color);
+            color: var(--text-color-secondary);
             font-size: 36px;
             cursor: pointer;
             padding: 0;
@@ -39,7 +39,7 @@
             z-index: 2;
 
             .popular-artists__carousel-button-icon-prev {
-                color: var(--text-general-color);
+                color: var(--text-color-secondary);
                 border-radius: 50%;
                 width: 30px;
                 height: 30px;
@@ -47,7 +47,7 @@
                 transform:scaleX(-1);
 
                 &:hover {
-                    color: var(--text-title-color);
+                    color: var(--text-color-title);
                 }
 
                 @media (max-width: 1024px) {
@@ -61,7 +61,7 @@
             }
 
             .popular-artists__carousel-button-icon-next {
-                color: var(--text-general-color);
+                color: var(--text-color-secondary);
                 transform:scaleX(1);
                 border-radius: 50%;
                 width: 30px;
@@ -69,7 +69,7 @@
                 transition: color 0.3s;
 
                 &:hover {
-                    color: var(--text-title-color);
+                    color: var(--text-color-title);
                 }
 
                 @media (max-width: 1024px) {
@@ -78,7 +78,7 @@
                     width: 30px;
                     height: 30px;
                     padding: 5px;
-                    background-color: rgba(0,0,0,0.8);
+                    background-color: var(--carousel-button-bg-color);
                 }
             }
         }
@@ -127,7 +127,7 @@
                         .item__info__name {
                             margin: 20px 0 0 0;
                             font-size: 24px;
-                            color: var(--text-title-color);
+                            color: var(--text-color-title);
                         }
 
                         .item__info__line {
@@ -167,7 +167,7 @@
                         .item__info__location {
                             height: 34px;
                             font-size: 16px;
-                            color: var(--text-general-color);
+                            color: var(--text-color-secondary);
                         }
                     }
                 }

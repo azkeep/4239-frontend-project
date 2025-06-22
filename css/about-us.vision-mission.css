@@ -2,7 +2,7 @@
 	/* background: linear-gradient(135deg, #0f1125, #141627); */
 	padding: 100px 20px;
 	position: relative;
-	color: #fff;
+	color: var(--text-color-title);
 	overflow: hidden;
 }
 
@@ -34,14 +34,14 @@
 }
 
 .section-icon {
-	color: #ff5e3a;
+	color: var(--accent-color-three);
 	font-size: 38px;
 	margin-bottom: 10px;
 	font-weight: 800;
 }
 
 .section-label {
-	color: #fff;
+	color: var(--text-color-title);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -58,18 +58,18 @@
 .mission-item h2 {
 	font-size: 20px;
 	font-weight: bold;
-	color: #fff;
+	color: var(--text-color-title);
 	margin-bottom: 10px;
 }
 
 .mission-item h2 span {
-	color: #fff;
+	color: var(--text-color-title);
 	font-weight: bold;
 	margin-right: 10px;
 }
 
 .mission-item p {
-	color: #ccc;
+	color: var(--text-color-secondary);
 	font-size: 16px;
 	line-height: 1.8;
 	max-width: 700px;
@@ -89,7 +89,7 @@
 }
 
 .section-label {
-	color: #fff;
+	color: var(--text-color-title);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -108,7 +108,7 @@
 	border: none;
 	height: 2px;
 	width: 70%;
-	background-color: #333;
+	background-color: var(--divider-line-color);
 	opacity: 0.4;
 	margin: 30px auto;
 }

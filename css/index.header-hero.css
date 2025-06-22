@@ -34,7 +34,7 @@
   font-size: 60px;
   font-weight: 800;
   margin: 0 0 24px 0;
-  color: white;
+  color: var(--text-color-title);
 }
 
 .listen-now__subtitle {
@@ -44,7 +44,7 @@
 }
 
 .listen-now__description {
-  color: #ccc;
+  color: var(--text-color-secondary);
   max-width: 400px;
   margin: 0;
 }
@@ -52,13 +52,13 @@
 .listen-now__slogan {
   font-size: 16px;
   margin: 0;
-  color: #ffffff;
+  color: var(--text-color-title);
 }
 
 .listen-now__slogan-line {
   width: 100px;
   height: 4px;
-  background-color: #ff6600;
+  background-color: var(--accent-color-three);
   margin: 0 auto;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .listen-now__logo-star {
-  color: #ff5e3a;
+  color: var(--accent-color-three);
   font-size: 68px;
   margin-bottom: 10px;
   font-weight: 800;
@@ -103,7 +103,7 @@
 .listen-now__podcast-label {
   font-size: 12px;
   font-weight: 600;
-  color: white;
+  color: var(--text-color-title);
   margin-top: 20px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -129,14 +129,14 @@
 
 .listen-now__podcast-link {
   font-size: 16px;
-  color: white;
+  color: var(--text-color-title);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .listen-now__podcast-link:hover {
-  color: #ff2d55;
+  color: var(--music-genre-hover-color);
 }
 @media (max-width: 600px) {
   .listen-now__podcast-list {

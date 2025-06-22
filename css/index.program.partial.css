@@ -1,14 +1,14 @@
 /*Vladyslava Shcherbyna*/
 body {
   color: #fff;
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #1a1e2b;
+  font-family: var(--font-regular);
+  background-color: var(--body-bg-solid);
   padding: 0;
   margin: 0;
 }
 
 .container {
-  background-color: #1a1e2b;
+  background-color: var(--body-bg-solid);
   padding: 30px;
   border-radius: 0;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .program-title {
-    color: #fff;
+    color: var(--text-color-title);
     font-size: 1em;
     font-weight: 500;
     margin-left: 10px;
@@ -34,7 +34,7 @@ body {
 }
 
 .program-description {
-    color: #fff;
+    color: var(--text-color-title);
     font-size: 1.6em;
     text-align: right;
     max-width: 500px;
@@ -43,7 +43,7 @@ body {
 }
 
 .star {
-  color: #4858F9;
+  color: var(--accent-color-four);
   margin-right: 5px;
   font-size: 34px;
   position: relative;
@@ -57,28 +57,28 @@ table {
 }
 
 th {
-  background-color: #1a1e2b;
-  color: #ff6f3c;
+  background-color: var(--body-bg-solid);
+  color: var(--accent-color-three);
   padding: 15px 10px;
   font-size: 1em;
   text-align: center;
-  border-bottom: 1px solid #2e3245;
+  border-bottom: 1px solid var(--feature-element-bg-color);
   font-weight: 500;
 }
 
 td {
-  border-top: 1px solid #2e3245;
-  border-bottom: 1px solid #2e3245;
+  border-top: 1px solid var(--feature-element-bg-color);
+  border-bottom: 1px solid var(--feature-element-bg-color);
   padding: 15px 10px;
   text-align: center;
-  color: #fff;
+  color: var(--text-color-title);
   font-size: 0.95em;
   font-weight: 400;
 }
 
 tr:nth-child(odd),
 tr:nth-child(even) {
-  background-color: #1a1e2b;
+  background-color: var(--body-bg-solid);
 }
 
 td:first-child {
@@ -90,5 +90,5 @@ td:first-child {
 th:first-child {
   text-align: left;
   padding-left: 20px;
-  color: #fff;
+  color: var(--text-color-title);
 }

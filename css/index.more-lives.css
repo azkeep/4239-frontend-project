@@ -9,7 +9,7 @@
     background-size: cover;
 
     .more-lives__container-wrapper {
-        background-color: rgba(26, 27, 41, 0.5);
+        background-color: var(--body-bg-gradient-filler50-half);
         width: 100%;
         padding: 160px 0;
     }
@@ -61,7 +61,7 @@
 
         .more-lives__title {
             margin: 20px 0 0 0;
-            color: var(--text-title-color);
+            color: var(--text-color-title);
             font-size: 30px;
             font-family: var(--font-title);
 
@@ -72,7 +72,7 @@
         }
 
         .more-lives__text {
-            color: var(--text-general-color);
+            color: var(--text-color-secondary);
             margin: 25px 0 0 0;
             font-size: 19px;
         }

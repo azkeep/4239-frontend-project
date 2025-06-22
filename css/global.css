@@ -5,11 +5,12 @@
   ✅ Підключення шрифтів та кольору тексту:
      - 'Noto Sans' — основний шрифт для тексту
      - 'Righteous' — декоративний шрифт для заголовків
-     - 'white' — основний колір шрифта
 
-     від Олександр Брайко
-     Зауважу, що не всюди текст білий. Білий у заголовках, тіло тексту
-     буває кольору #cccccc. Дивіться уважно на оріджин.
+     - '#ffffff' — основний колір заголовків
+     - '#dbdbdb' - колір підзаголовків
+     - '#cccccc' - колір загального тексту
+     - всі кольори в змінних нижче
+     - якщо зустрічаєте свій унікальний колір - створюєте нову змінну
 
   ✅ Стартовий Reset:
      - Обнуляє margin та padding для всіх елементів і псевдоелементів
@@ -36,88 +37,86 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*
-  Олександр Брайко:
-  Додав змінних для акцентних кольорів
-  зірки, слеши, кольори іконок, і т.д.
-*/
 :root {
-  --accent-color-one:#e100ff;
-  --accent-color-two:#7f00ff;
-  --accent-color-three:#FF7433;
-  --accent-color-four:#4858F9;
+    --accent-color-one: #e100ff;
+    --accent-color-two: #7f00ff;
+    --accent-color-three: #FF7433;
+    --accent-color-four: #4858F9;
 
-  --text-title-color:#ffffff;
-  --text-general-color:#cccccc;
+    --text-color-title: #ffffff; /*rgb(255, 255, 255)*/
+    --text-color-primary: #dbdbdb; /*rgb(219, 219, 219)*/
+    --text-color-secondary: #cccccc; /*rgb(204, 204, 204)*/
+    --text-shadow-color: rgba(0, 0, 0, 0.7);
 
-  --text-color-title:#ffffff;
-  --text-color-primary:#dbdbdb, rgb(219,219,219);
-  --text-color-secondary:#cccccc;
+    --font-title: 'Righteous', sans-serif;
+    --font-regular: 'Noto Sans', sans-serif;
 
-  --title-color: white;
-  --text-color: #DBDBDB;
+    --icon-bg-normal-color: #9500FF;
+    --icon-bg-hover-color: #B230FF;
 
-  --font-title: 'Righteous', sans-serif;
-  --font-regular: 'Noto Sans', sans-serif;
+    --music-genre-hover-color: #fe226a;
 
-  --icon-bg-normal-color:#9500FF;
-  --icon-bg-hover-color:#B230FF;
+    --body-bg-solid: rgb(26, 26, 41);
+    --body-bg-solid-dark: rgb(19, 19, 31);
+    --body-bg-gradient-filler90: rgba(26, 26, 41, 0.9);
+    --body-bg-gradient-filler50: rgba(26, 26, 41, 0.5);
+    --header-burger-icon-bg-color: rgb(255, 255, 255);
+    --hero-bg-filter-one: rgba(0, 0, 0, 0.5);
+    --hero-bg-filter-two: rgba(26, 26, 26, 0.7);
+    --carousel-button-bg-color: rgba(0, 0, 0, 0.8);
 
-  --footer-bg-color:#151622;
+    --divider-line-color: #333333;
 
-  --border-color: #31323f;
-  --button-color: white;
-  --button-background-color: #7f00fc;
-
-  --music-genre-hover-color: #fe226a;
-
+    --feature-element-bg-color: #2b2b48;     /*rgb(43, 43, 72)*/
+    --feature-element-sub-color: #25253d;
 }
 
 /* Плавні анімації по замовчуванню */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Видалити спискові стилі */
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 /* Видалити підкреслення з посилань */
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Зображення адаптивні */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /*статичний background який однаковий для всіх сторінок*/
 body {
-  background-color: rgba(26, 26, 41, 1);
-  background-image: linear-gradient(rgba(26, 26, 41, 0.9),
-      rgba(26, 26, 41, 0.9)),
+    background-color: var(--body-bg-solid);
+    background-image: linear-gradient(
+            var(--body-bg-gradient-filler90),
+            var(--body-bg-gradient-filler90)),
     url("../img/bg-image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /*-----------------------------------------------------*/
-  color: #ffffff;
-  font-family: var(--font-regular);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*-----------------------------------------------------*/
+    color: var(--text-color-secondary);
+    font-family: var(--font-regular);
 }
 
 /* клас який обмежує ширину контентної частини*/
-.content-container{
-  max-width: 1200px;
+.content-container {
+    max-width: 1200px;
 }

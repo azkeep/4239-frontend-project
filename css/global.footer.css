@@ -1,7 +1,9 @@
+/* by Dmytro Chornobryvets */
+
 .page-footer {
   width: 100%;
-  background-color: var(--footer-bg-color);
-  color: var(--text-color);
+  background-color: var(--body-bg-solid-dark);
+  color: var(--text-color-primary);
 }
 
 .page-footer__content-shell {
@@ -193,17 +195,18 @@
 
 .navigation-groups__entry-platform-link {
   font-size: 16px;
-  color: white;
+  color: var(--text-color-title);
   font-weight: 400;
 }
 
 .navigation-groups__entry-platform-link:hover {
-  color: #ff2d55;
+  color: var(--music-genre-hover-color);
 }
 
 .page-footer__horizontal-rule {
   height: 1px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+  border-bottom: 1px solid var(--divider-line-color);
   box-sizing: border-box;
   width: 100%;
 }

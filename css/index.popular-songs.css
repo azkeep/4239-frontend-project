@@ -1,11 +1,11 @@
 .popular-songs {
   padding: 60px 16px;
-  background-color: #1a1b29; 
+  background-color: var(--body-bg-solid);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Inter', sans-serif;
-  color: #fff;
+  font-family: var(--font-regular);
+  color: var(--text-color-title);
   gap: 32px;
   text-align: center;
 }
@@ -13,10 +13,10 @@
 .popular-songs__media {
   max-width: 900px;
   width: 100%;
-  border: 6px solid #2b2b48;
+  border: 6px solid var(--feature-element-bg-color);
   padding: 8px;
   border-radius: 4px;
-  background-color: #2b2b48;
+  /*background-color: var(--feature-element-bg-color);*/
 }
 
 .popular-songs__image {
@@ -43,7 +43,7 @@
 
 .popular-songs__tag::before {
   content: '✳';
-  color: #e100ff;
+  color: var(--accent-color-one);
   margin-right: 8px;
   font-size: 20px;
   line-height: 1;
@@ -54,7 +54,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #e100ff;
+  color: var(--accent-color-one);
 }
 
 .popular-songs__description {
@@ -65,7 +65,7 @@
 .popular-songs__highlight {
   font-weight: 700;
   text-decoration: underline;
-  color: #7f00ff;
+  color: var(--accent-color-two);
 }
 
 @media (min-width: 768px) {

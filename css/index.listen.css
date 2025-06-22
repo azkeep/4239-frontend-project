@@ -10,7 +10,7 @@
     background-size: cover;
 
     .listen__container-wrapper {
-        background-color: rgba(26, 27, 41, 0.8);
+        background-color: var(--hero-bg-filter-two);
         width: 100%;
         padding: 160px 0;
 
@@ -48,7 +48,7 @@
                 .listen__text {
                     padding:0 24px;
                     margin: 40px 0 0 0;
-                    color: var(--text-general-color);
+                    color: var(--text-color-secondary);
                     font-size: 19px;
 
                 }
@@ -64,7 +64,7 @@
                         width: 180px;
                         height: 42px;
                         border-radius: 21px;
-                        color: var(--text-title-color);
+                        color: var(--text-color-title);
                         background-image: linear-gradient(
                                 45deg,
                                 var(--accent-color-one),

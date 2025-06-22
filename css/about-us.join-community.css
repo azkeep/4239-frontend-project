@@ -1,14 +1,16 @@
 .join-community {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	background: linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)),
 		url('../img/index/about-us/about-us-join-the-community-bg.png') no-repeat
 			center center / cover;
 	padding: 100px 20px;
 	text-align: center;
-	color: #fff;
+	color: var(--text-color-title);
 }
 
 .join-community .join-title {
-	color: #ff7433;
+	color: var(--accent-color-three);
 	font-weight: bold;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
@@ -23,13 +25,16 @@
 
 .join-community p {
 	font-size: 18px;
-	color: #ccc;
+	color: var(--text-color-secondary);
 	margin-bottom: 25px;
 }
 
 .btn-primary {
-	background: linear-gradient(to right, #9400c3, #5000cb);
-	color: white;
+	background: linear-gradient(
+			to right,
+			var(--accent-color-one),
+			var(--accent-color-four));
+	color: var(--text-color-title);
 	padding: 12px 30px;
 	border-radius: 30px;
 	text-decoration: none;
@@ -41,5 +46,8 @@
 }
 
 .btn-primary:hover {
-	background: linear-gradient(to right, #5000cb, #9400c3);
+	background: linear-gradient(
+			to right,
+			var(--accent-color-four),
+			var(--accent-color-one));
 }

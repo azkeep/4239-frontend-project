@@ -1,7 +1,7 @@
 /*  by Oleksandr Braiko */
 
 .wlm-container {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-regular);
     max-width: 1170px;
     margin: auto;
     align-items: center;
@@ -20,7 +20,7 @@
         }
 
         .wlm-affirmation {
-            color: var(--text-general-color);
+            color: var(--text-color-secondary);
             margin: 25px 0 0 0;
             text-transform: uppercase;
             text-align: justify;
@@ -32,8 +32,8 @@
         .wlm-message {
             margin: 20px 0 0 0;
             font-size: 56px;
-            color: var(--text-title-color);
-            font-family: Righteous, sans-serif;
+            color: var(--text-color-title);
+            font-family: var(--font-title);
             font-weight: 400;
 
             @media (min-width: 1024px) {
