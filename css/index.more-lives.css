@@ -9,7 +9,7 @@
     background-size: cover;
 
     .more-lives__container-wrapper {
-        background-color: var(--body-bg-gradient-filler50-half);
+        background-color: var(--body-bg-gradient-filler50);
         width: 100%;
         padding: 160px 0;
     }
