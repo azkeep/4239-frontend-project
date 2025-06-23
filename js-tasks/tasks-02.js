@@ -11,15 +11,12 @@ const max = (list) => Math.max(...list);
 // https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
 const min = (arr, toReturn) => {
     let minValue = Math.min(...arr);
-    switch (toReturn) {
-        case "value":
-            return minValue
-        case "index":
-            return arr.indexOf(minValue);
-        default:
-            return null;
-    }
+    return {
+        "value": minValue,
+        "index": arr.indexOf(minValue)
+    }[toReturn];
 }
+
 // https://www.codewars.com/kata/53ee5429ba190077850011d4/train/javascript
 const doubleInteger = (i) => 2 * i;
 
