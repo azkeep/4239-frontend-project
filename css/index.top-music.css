@@ -70,6 +70,9 @@
     .broadcast__content {
         padding: 60px 0;
         margin: 0 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
 
         .broadcast__card {
             background-image: url('../img/index/about-echowave/microphone.png');
@@ -137,6 +140,8 @@
                 font-size: 16px;
                 font-family: var(--font-regular);
                 color: var(--text-color-secondary);
+                text-align: justify;
+                font-weight: 300;
             }
 
             .about__button {
@@ -159,5 +164,14 @@
                 }
             }
         }
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 20px;
+            .broadcast__card, .broadcast__about {
+                width: 50%;
+            }
+
+        }
+        
     }
 }
