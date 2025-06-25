@@ -161,6 +161,7 @@
                 }
 
                 .item__title {
+                    color: var(--text-color-title);
                     margin: 20px 0 0 0;
                     font-size: 18px;
 
