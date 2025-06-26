@@ -1,15 +1,21 @@
 /*  by Yana Baidatska */
 .news {
-    padding: 105px 0px 40px;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .news__header {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
-    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.news__intro {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @media (max-width: 768px) {
@@ -50,10 +56,13 @@
     font-size: 18px;
     color: var(--text-color-secondary);
     max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .news__item {
-    flex: 0 1 calc(50% - 40px);
+    display: grid;
+    gap: 5px;
     text-align: left;
 }
 
@@ -64,7 +73,13 @@
 
 @media (max-width: 768px) {
   .news__item {
-    flex: 0 1 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1152px) {
+  .news__item {
+    grid-template-columns: 1fr 1fr 1fr;;
   }
 }
 
