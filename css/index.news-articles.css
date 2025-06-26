@@ -1,4 +1,23 @@
 /*  by Yana Baidatska */
+.news {
+    padding: 105px 0px 40px;
+    max-width: 1200px;
+}
+
+.news__header {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .news__header {
+    grid-template-columns: 1fr;
+  }
+}
+
 .news__list {
     padding: 80px 20px;
     text-align: center;
@@ -17,11 +36,6 @@
     margin-bottom: 10px;
 }
 
-.news__intro {
-    display: grid;
-    gap: 10px;
-}
-
 .news__title {
     font: var(--font-title);
     font-weight: 400;
@@ -36,7 +50,6 @@
     font-size: 18px;
     color: var(--text-color-secondary);
     max-width: 700px;
-    margin: 0 auto 40px;
 }
 
 .news__item {
@@ -87,7 +100,7 @@
     font-weight: 700;
     color: var(--text-color-title);
     transition: color 0.3s ease;
-    margin-top: 15px;
+    margin-top: 26.25px;
 }
 
 .news__link:hover {
