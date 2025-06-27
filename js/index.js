@@ -1,5 +1,6 @@
 function init() {
     import('./index.popular-artists.js');      /* by Oleksandr Braiko */
+    import('./index.testimonials.js');
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
