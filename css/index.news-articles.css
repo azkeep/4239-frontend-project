@@ -48,11 +48,12 @@ width: 100%;
 }
 
 .news__label {
-    font: var(--font-regular);
+    font: var(--font-title);
     text-transform: uppercase;
+    font-style: italic;
     font-size: 14px;
     font-weight: 700;
-    color: var(--text-color-secondary);
+    color: var(--text-color-primary);
     margin-bottom: 10px;
 }
 
