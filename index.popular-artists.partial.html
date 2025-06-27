@@ -8,8 +8,11 @@ TODO:
 
 <section class="popular-artists__container">
 
+
     <div class="popular-artists__title" id="artists">
-        Popular Artists
+        <a id="popular-artists">
+            Popular Artists
+        </a>
     </div>
 
     <div class="popular-artists__divider">
@@ -23,7 +26,8 @@ TODO:
         <button class="popular-artists__carousel-button" id="popularArtistPrev">
             <svg viewBox="0 0 30 30" class="popular-artists__carousel-button-icon-prev">
                 <g style="" fill="currentColor">
-                    <path fill="currentColor" d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"></path>
+                    <path fill="currentColor"
+                          d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"></path>
                 </g>
             </svg>
         </button>
@@ -32,71 +36,7 @@ TODO:
 
             <ul class="popular-artists__carousel__list" id="popularArtistsCarousel">
 
-                <li class="popular-artists__carousel__item" id="popularArtist00">
-                    <div class="item__image-block">
-                        <img src="img/index/popular-artists/guitar-boy-blue.webp" class="item__image" alt="John Echo"/>
-                    </div>
-                    <div class="item__info">
-                        <p class="item__info__name">John Echo</p>
-                        <span class="item__info__line">
-                            <span class="item__info__line line-one"></span>
-                        </span>
-                        <p class="item__info__location">New York</p>
-                    </div>
-                </li>
-
-                <li class="popular-artists__carousel__item" id="popularArtist01">
-                    <div class="item__image-block">
-                        <img src="img/index/popular-artists/hustler-graffiti.webp" class="item__image"
-                             alt="Electric Mirage"/>
-                    </div>
-                    <div class="item__info">
-                        <p class="item__info__name">Electric Mirage</p>
-                        <span class="item__info__line">
-                            <span class="item__info__line line-two"></span>
-                        </span>
-                        <p class="item__info__location">Puerto Rico</p>
-                    </div>
-                </li>
-
-                <li class="popular-artists__carousel__item" id="popularArtist02">
-                    <div class="item__image-block">
-                        <img src="img/index/popular-artists/girls-orange-blue.webp" class="item__image" alt="Serenade"/>
-                    </div>
-                    <div class="item__info">
-                        <p class="item__info__name">Serenade</p>
-                        <span class="item__info__line">
-                            <span class="item__info__line line-three"></span>
-                        </span>
-                        <p class="item__info__location">San Francisco</p>
-                    </div>
-                </li>
-
-                <li class="popular-artists__carousel__item" id="popularArtist03">
-                    <div class="item__image-block">
-                        <img src="img/index/popular-artists/drummer-orange.webp" class="item__image" alt="Hurricane"/>
-                    </div>
-                    <div class="item__info">
-                        <p class="item__info__name">Hurricane</p>
-                        <span class="item__info__line">
-                                            <span class="item__info__line line-four"></span>
-                                        </span>
-                        <p class="item__info__location">Vienna</p>
-                    </div>
-                </li>
-
-                <li class="popular-artists__carousel__item" id="popularArtist04">
-                    <div class="item__image-block">
-                        <img src="img/index/popular-artists/girl-red.webp" class="item__image" alt="Velvet Skyline"/>
-                    </div>
-                    <div class="item__info">
-                        <p class="item__info__name">Velvet Skyline</p>
-                        <span class="item__info__line">
-                                            <span class="item__info__line line-four"></span>
-                                        </span>
-                        <p class="item__info__location">Washington</p>
-                    </div>
-                </li>
+                <!-- JS templates render here -->
 
             </ul>
 
@@ -105,64 +45,12 @@ TODO:
         <button class="popular-artists__carousel-button" id="popularArtistNext">
             <svg viewBox="0 0 30 30" class="popular-artists__carousel-button-icon-next">
                 <g style="" fill="currentColor">
-                    <path fill="currentColor" d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"></path>
+                    <path fill="currentColor"
+                          d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"></path>
                 </g>
             </svg>
         </button>
 
     </div>
-
-    <script>
-
-        const popularArtistsCarousel = document.getElementById('popularArtistsCarousel');
-        const popularArtistsCarouselBox = document.getElementById('popularArtistsCarouselBox');
-        const slideNext = document.getElementById('popularArtistNext');
-        const slidePrev = document.getElementById('popularArtistPrev');
-
-        const artistCard = document.getElementById('popularArtist00');
-        let popularArtistCardWidth = artistCard.getBoundingClientRect().width;
-        let artistCardPadding = parseInt(
-            (window.getComputedStyle(artistCard))
-                .getPropertyValue('padding-right')
-        );
-
-        let shiftAmount = popularArtistCardWidth + (artistCardPadding / 2);
-        let popularArtistIndex = 0;
-        let popularArtistsTotal = document.querySelectorAll('.popular-artists__carousel__item').length;
-        let popularArtistsTotalWidth = popularArtistCardWidth * popularArtistsTotal;
-
-        function popularArtistShiftUpdate() {
-            popularArtistsCarousel.style.transform = `translateX(-${popularArtistIndex * shiftAmount}px)`;
-        }
-
-        slideNext.addEventListener('click', () => {
-            let popularArtistsCarouselBoxWidth = parseInt(
-                (window.getComputedStyle(popularArtistsCarouselBox))
-                    .getPropertyValue('width')
-            );
-
-            if (((popularArtistIndex * shiftAmount) + popularArtistsCarouselBoxWidth) > popularArtistsTotalWidth) {
-                popularArtistIndex = 0;
-            } else {
-                popularArtistIndex = (popularArtistIndex + 1) % shiftAmount;
-            }
-
-            popularArtistShiftUpdate();
-        })
-
-        slidePrev.addEventListener('click', () => {
-            popularArtistIndex = (popularArtistIndex - 1) % shiftAmount;
-            if (popularArtistIndex < 0) {
-                popularArtistIndex = 0;
-            }
-            popularArtistShiftUpdate();
-        })
-
-        window.addEventListener('resize', () => {
-            popularArtistShiftUpdate();
-        })
-
-    </script>
-
 
 </section>
