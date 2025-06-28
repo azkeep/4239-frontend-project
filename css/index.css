@@ -10,7 +10,7 @@
 @import 'index.features-with-icon.css';     /* Andrii Kovalyk */
 @import 'index.latest-podcasts.css';        /* Maksym Ozirskyi */
 @import 'index.listen.css';                 /* Oleksandr Braiko */
-/*  insert results          */
+@import 'index.results.css';                /* Oleksandr Braiko & Pavlo Demchenko */
 @import 'index.join-us.css';                /* Oleksandra Honcharova */ 
 @import "index.program.partial.css";        /* Vladyslava Shcherbyna */
 @import 'index.popular-artists.css';        /* Oleksandr Braiko */
