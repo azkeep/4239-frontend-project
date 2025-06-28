@@ -145,3 +145,12 @@ window.addEventListener('resize', () => {
 })
 
 rebuildCarousel();
+
+function scrollToElement() {
+    const url = new URL(document.URL);
+    const scrollToId = url.hash.replace('#', '');
+    const elementToScrollTo = document.getElementById(scrollToId);
+    elementToScrollTo.scrollIntoView();
+}
+
+scrollToElement();
