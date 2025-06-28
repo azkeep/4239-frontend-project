@@ -24,8 +24,6 @@
     .popular-artists__carousel__wrapper {
         display: flex;
         flex-direction: row;
-        max-width: 1170px;
-        position: relative;
 
         .popular-artists__carousel-button {
             background: none;
@@ -34,35 +32,34 @@
             font-size: 36px;
             cursor: pointer;
             padding: 0;
-            /*padding: 10px;*/
             transition: color 0.3s;
             z-index: 2;
 
-            .popular-artists__carousel-button-icon-prev {
+            .popular-artists__carousel-button-icon--prev {
                 color: var(--text-color-secondary);
                 border-radius: 50%;
                 width: 30px;
                 height: 30px;
                 transition: color 0.3s;
-                transform:scaleX(-1);
+                transform: scaleX(-1);
 
                 &:hover {
                     color: var(--text-color-title);
                 }
 
                 @media (max-width: 1024px) {
-                    position:relative;
-                    left:48px;
+                    position: relative;
+                    left: 10px;
                     width: 30px;
                     height: 30px;
                     padding: 5px;
-                    background-color: rgba(0,0,0,0.8);
+                    background-color: rgba(0, 0, 0, 0.8);
                 }
             }
 
-            .popular-artists__carousel-button-icon-next {
+            .popular-artists__carousel-button-icon--next {
                 color: var(--text-color-secondary);
-                transform:scaleX(1);
+                transform: scaleX(1);
                 border-radius: 50%;
                 width: 30px;
                 height: 30px;
@@ -73,8 +70,8 @@
                 }
 
                 @media (max-width: 1024px) {
-                    position:relative;
-                    right:12px;
+                    position: relative;
+                    right: 10px;
                     width: 30px;
                     height: 30px;
                     padding: 5px;
@@ -84,41 +81,39 @@
         }
 
         .popular-artists__carousel {
-            margin: 50px 0 0 0;
-            padding: 0 20px;
             display: flex;
+            flex-direction: row;
+            position: relative;
             overflow: hidden;
-            width: 100%;
-            scroll-behavior: smooth;
+            margin: 50px auto 0;
+            width: 94%;
 
             .popular-artists__carousel__list {
-                max-width: 1170px;
-                list-style: none;
-                align-items: center;
-                justify-content: space-around;
+                max-width: 100%;
                 display: flex;
                 flex-direction: row;
                 transition: transform 0.5s ease-in-out;
 
-                /* old grid for proper images scaling per resolution */
-                /*display: grid;*/
-                /*gap: 0;*/
-                /*grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));*/
-
                 .popular-artists__carousel__item {
-                    padding: 0 15px 0 15px;
+                    padding: 0 15px;
                     margin: 0;
                     display: inline-block;
                     min-width: 260px;
-                    flex-shrink: 0;
+                    flex: 0 0 100%;
+
+                    @media (min-width: 768px) {
+                        flex: 0 0 50%;
+                    }
+
+                    @media (min-width: 1024px) {
+                        flex: 0 0 25%;
+                    }
 
                     .item__image-block {
 
                         .item__image {
                             object-fit: cover;
                             aspect-ratio: 1;
-                            display: inline-block;
-                            max-width: 240px;
                         }
                     }
 
@@ -128,6 +123,7 @@
                             margin: 20px 0 0 0;
                             font-size: 24px;
                             color: var(--text-color-title);
+                            font-weight: bold;
                         }
 
                         .item__info__line {

@@ -37,7 +37,8 @@ const lineStyles = [
 
 function renderPopularArtists(popularArtists) {
     const popularArtistsListHTML = [];
-    for (let i = 0; i < 5; i++) {
+    const listDuplicates = 1;
+    for (let i = 0; i < listDuplicates; i++) {
         for (let artist of popularArtists) {
             let randomLineIndex = Math.trunc(((Math.random() * 10) % lineStyles.length));
             popularArtistsListHTML.push(`<li class="popular-artists__carousel__item">
@@ -60,40 +61,87 @@ function renderPopularArtists(popularArtists) {
 
 renderPopularArtists(popularArtists);
 
-const popularArtistsCarouselBox = document.querySelector('.popular-artists__carousel');
-const popularArtistsCarousel = document.querySelector('.popular-artists__carousel__list');
-const slideNext = document.getElementById('popularArtistNext');
-const slidePrev = document.getElementById('popularArtistPrev');
-
+const artistsCarousel = document.querySelector('.popular-artists__carousel__list');
 const artistCard = document.querySelector('.popular-artists__carousel__item');
-const popularArtistCardWidth = artistCard.offsetWidth;
-let popularArtistIndex = 0;
+const artistNextButton = document.getElementById('popularArtistNext');
+const artistPrevButton = document.getElementById('popularArtistPrev');
+const artistCardWidth = artistCard.offsetWidth;
+let artistIndex = 0;
+let artists = Array.from(artistsCarousel.children);
 
-const artistCardPadding = parseInt((window.getComputedStyle(artistCard)).getPropertyValue('padding-right'));
-const shiftAmount = popularArtistCardWidth + artistCardPadding;
-
-const popularArtistsNumber = document.querySelectorAll('.popular-artists__carousel__item').length;
-const popularArtistsTotalWidth = popularArtistCardWidth * popularArtistsNumber;
-
-function popularArtistShiftUpdate() {
-    popularArtistsCarousel.style.transform = `translateX(-${popularArtistIndex * shiftAmount}px)`;
+function getVisibleCount() {
+    return Math.trunc(artistsCarousel.offsetWidth / artistCardWidth);
 }
 
-slideNext.addEventListener('click', () => {
-    const popularArtistsCarouselBoxWidth = popularArtistsCarouselBox.offsetWidth;
-    if (((popularArtistIndex * shiftAmount) + popularArtistsCarouselBoxWidth) > popularArtistsTotalWidth) {
-        popularArtistIndex = 0;
-    } else {popularArtistIndex = (popularArtistIndex + 1) % shiftAmount;}
+function cloneSlides() {
+    const visible = getVisibleCount();
+    const originalSlides = artists.filter(s => !s.classList.contains('clone'));
 
-    popularArtistShiftUpdate();
+    artists.forEach(slide => {
+        if (slide.classList.contains('clone')) {
+            artistsCarousel.removeChild(slide);
+        }
+    });
+
+    for (let i = 0; i < visible; i++) {
+        const firstClone = originalSlides[i].cloneNode(true);
+        const lastClone = originalSlides[originalSlides.length - 1 - i].cloneNode(true);
+        firstClone.classList.add('clone');
+        lastClone.classList.add('clone');
+        artistsCarousel.appendChild(firstClone);
+        artistsCarousel.insertBefore(lastClone, artistsCarousel.firstChild);
+    }
+
+    artists = Array.from(artistsCarousel.children);
+}
+
+function setInitialPosition() {
+    const slideWidth = artists[0].getBoundingClientRect().width;
+    artistIndex = getVisibleCount();
+    artistsCarousel.style.transition = 'none';
+    artistsCarousel.style.transform = `translateX(-${slideWidth * artistIndex}px)`;
+}
+
+function moveToSlide() {
+    const slideWidth = artists[0].getBoundingClientRect().width;
+    artistsCarousel.style.transition = 'transform 0.5s ease-in-out';
+    artistsCarousel.style.transform = `translateX(-${slideWidth * artistIndex}px)`;
+}
+
+artistsCarousel.addEventListener('transitionend', () => {
+    const slideWidth = artists[0].getBoundingClientRect().width;
+    const visible = getVisibleCount();
+
+    if (artists[artistIndex].classList.contains('clone')) {
+        artistsCarousel.style.transition = 'none';
+
+        if (artistIndex >= artists.length - visible) {
+            artistIndex = visible;
+        } else if (artistIndex === 0) {
+            artistIndex = artists.length - visible * 2;
+        }
+
+        artistsCarousel.style.transform = `translateX(-${slideWidth * artistIndex}px)`;
+    }
+});
+
+artistNextButton.addEventListener('click', () => {
+    artistIndex++;
+    moveToSlide();
 })
 
-slidePrev.addEventListener('click', () => {
-    popularArtistIndex = (popularArtistIndex - 1) % shiftAmount;
-    if (popularArtistIndex < 0) {popularArtistIndex = 0;}
-    popularArtistShiftUpdate();
+artistPrevButton.addEventListener('click', () => {
+    artistIndex--;
+    moveToSlide();
 })
+
+function rebuildCarousel() {
+    cloneSlides();
+    setInitialPosition();
+}
 
 window.addEventListener('resize', () => {
-    popularArtistShiftUpdate();
+    rebuildCarousel();
 })
+
+rebuildCarousel();
