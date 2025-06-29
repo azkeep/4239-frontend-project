@@ -60,7 +60,7 @@
         </div>
 
         <div class="contacts__form">
-            <form action="#">
+            <form id="contact-form" action="https://formspree.io/f/mdkzbowk" method="post">
                 <fieldset class="contacts__fieldset">
                     <label class="contacts__input">
                         <input type="text" name="user-name" placeholder="Your name*" style="border-radius: 20px;"
@@ -77,8 +77,9 @@
                         <textarea id="message" name="message" rows="5" cols="25" placeholder="Your message"
                             style="border-radius: 20px;" required></textarea>
                     </label>
-                    <button class="contacts__button" type="submit" style="border-radius: 20px;"
+                    <button id="contact-form-button" class="contacts__button" type="submit" style="border-radius: 20px;"
                         name="submit">Send</button>
+
                 </fieldset>
             </form>
         </div>
