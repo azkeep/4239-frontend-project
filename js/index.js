@@ -1,6 +1,7 @@
 function init() {
     import('./index.popular-artists.js');      /* by Oleksandr Braiko */
     import('./index.testimonials.js');
+    import('./index.popular-music-carousel.js');
     import('./contacts.register.js');
     import('./contacts.header-hero.js');
 }
