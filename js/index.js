@@ -5,6 +5,7 @@ function init() {
     import('./contacts.register.js');
     import('./contacts.header-hero.js');
     import('./index.popular-songs.script.js'); /* by Viktoriia Remeniuk */
+    import('./global-header-toggle.js')
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
