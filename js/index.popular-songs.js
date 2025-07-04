@@ -24,11 +24,12 @@ function makeHighlightClickable() {
   }
 }
 
+const saved = localStorage.getItem('popularSongsText');
+if (saved) {
+  description.innerHTML = saved;
+  makeHighlightClickable(); 
+}
 
-  const saved = localStorage.getItem('popularSongsText');
-  if (saved) {
-    description.innerHTML = saved;
-  }
 
   makeHighlightClickable();
 
