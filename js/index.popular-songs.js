@@ -16,7 +16,7 @@ function makeHighlightClickable() {
     highlight.style.cursor = 'pointer';
     highlight.addEventListener('click', (e) => {
       e.stopPropagation(); 
-      const target = document.getElementById('popular-songs-list');
+      const target = document.querySelector('.popular_music__carousel');
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
