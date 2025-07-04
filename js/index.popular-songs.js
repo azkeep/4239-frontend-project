@@ -54,7 +54,7 @@ if (saved) {
   }, 10000);
 });
 
-fetch('data/popular-songs.json')
+fetch('api/popular-songs.json')
   .then((res) => res.json())
   .then((songs) => {
     const list = document.getElementById('popular-songs-list');
