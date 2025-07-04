@@ -4,7 +4,7 @@ function init() {
     import('./index.popular-music-carousel.js');
     import('./contacts.register.js');
     import('./contacts.header-hero.js');
-    import('./index.popular-songs.script.js'); /* by Viktoriia Remeniuk */
+    import('./index.popular-songs.js'); /* by Viktoriia Remeniuk */
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;

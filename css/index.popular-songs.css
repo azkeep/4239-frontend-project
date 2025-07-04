@@ -57,9 +57,11 @@
 
 .popular-songs__highlight {
   font-weight: 700;
+  cursor: pointer;
   text-decoration: underline;
   color: var(--accent-color-two);
 }
+
 
 @media (min-width: 768px) {
   .popular-songs__info {
@@ -90,4 +92,6 @@
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+
+
 
