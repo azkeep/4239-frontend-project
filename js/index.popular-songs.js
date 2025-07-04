@@ -48,3 +48,26 @@ document.addEventListener('DOMContentLoaded', function () {
     isAlt = !isAlt;
   }, 10000);
 });
+
+fetch('data/popular-songs.json')
+  .then((res) => res.json())
+  .then((songs) => {
+    const list = document.getElementById('popular-songs-list');
+    songs.forEach((song) => {
+      const li = document.createElement('li');
+      li.className = 'popular-songs__item';
+      li.innerHTML = `
+        <figure class="popular-songs__card">
+          <img class="popular-songs__track-image" src="${song.image}" alt="${song.title}">
+          <figcaption class="popular-songs__caption">
+            <strong class="popular-songs__title">${song.title}</strong>
+            <span class="popular-songs__artist">${song.artist}</span>
+          </figcaption>
+        </figure>
+      `;
+      list.appendChild(li);
+    });
+  })
+  .catch((err) => {
+    console.error('Could not load popular songs:', err);
+  });
