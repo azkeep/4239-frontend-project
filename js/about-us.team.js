@@ -1,27 +1,7 @@
 /* Pavlo Demchenko & Oleksandr Braiko */
 
-const teamList = [
-    {
-        name: "Harry Jones",
-        imagePath: "img/about-us/team/harry-jones.webp",
-    },
-    {
-        name: "Jessica Errington",
-        imagePath: "img/about-us/team/jessica-errington.webp",
-    },
-    {
-        name: "Eric Maddoc",
-        imagePath: "img/about-us/team/eric-maddoc.webp",
-    },
-    {
-        name: "Amanda Poe",
-        imagePath: "img/about-us/team/amanda-poe.webp",
-    },
-    {
-        name: "Diana Ferrington",
-        imagePath: "img/about-us/team/diana-ferrington.webp",
-    }
-];
+const response = await fetch ('./api/team.json');
+const teamList = await response.json();
 
 function renderTeam(teamList) {
     const teamListHTML = [];
@@ -73,12 +53,12 @@ const hostCardWidth = hostCard.offsetWidth;
 let hostIndex = 0;
 let hosts = Array.from(teamCarousel.children);
 
-function getVisibleCount() {
+function getVisibleHostsCount() {
     return Math.trunc(teamCarousel.offsetWidth / hostCardWidth);
 }
 
-function cloneSlides() {
-    const visible = getVisibleCount();
+function cloneHostSlides() {
+    const visible = getVisibleHostsCount();
     const originalSlides = hosts.filter(s => !s.classList.contains('clone'));
 
     hosts.forEach(slide => {
@@ -99,14 +79,14 @@ function cloneSlides() {
     hosts = Array.from(teamCarousel.children);
 }
 
-function setInitialPosition() {
+function setInitialHostPosition() {
     const slideWidth = hosts[0].getBoundingClientRect().width;
-    hostIndex = getVisibleCount();
+    hostIndex = getVisibleHostsCount();
     teamCarousel.style.transition = 'none';
     teamCarousel.style.transform = `translateX(-${slideWidth * hostIndex}px)`;
 }
 
-function moveToSlide() {
+function moveToHostSlide() {
     const slideWidth = hosts[0].getBoundingClientRect().width;
     teamCarousel.style.transition = 'transform 0.5s ease-in-out';
     teamCarousel.style.transform = `translateX(-${slideWidth * hostIndex}px)`;
@@ -114,7 +94,7 @@ function moveToSlide() {
 
 teamCarousel.addEventListener('transitionend', () => {
     const slideWidth = hosts[0].getBoundingClientRect().width;
-    const visible = getVisibleCount();
+    const visible = getVisibleHostsCount();
 
     if (hosts[hostIndex].classList.contains('clone')) {
         teamCarousel.style.transition = 'none';
@@ -131,24 +111,24 @@ teamCarousel.addEventListener('transitionend', () => {
 
 hostNextButton.addEventListener('click', () => {
     hostIndex++;
-    moveToSlide();
+    moveToHostSlide();
 })
 
 hostPrevButton.addEventListener('click', () => {
     hostIndex--;
-    moveToSlide();
+    moveToHostSlide();
 })
 
-function rebuildCarousel() {
-    cloneSlides();
-    setInitialPosition();
+function rebuildTeamCarousel() {
+    cloneHostSlides();
+    setInitialHostPosition();
 }
 
 window.addEventListener('resize', () => {
-    rebuildCarousel();
+    rebuildTeamCarousel();
 })
 
-rebuildCarousel();
+rebuildTeamCarousel();
 
 function scrollToElement() {
     const url = new URL(document.URL);
