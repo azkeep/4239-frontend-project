@@ -10,16 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 300);
   }
 
-  function makeHighlightClickable() {
-    const highlight = document.querySelector('.popular-songs__highlight');
-    if (highlight) {
-      highlight.style.cursor = 'pointer';
-      highlight.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        alert('Opening best songs playlist!');
-      });
-    }
+function makeHighlightClickable() {
+  const highlight = document.querySelector('.popular-songs__highlight');
+  if (highlight) {
+    highlight.style.cursor = 'pointer';
+    highlight.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      const target = document.getElementById('popular-songs-list');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
+}
+
 
   const saved = localStorage.getItem('popularSongsText');
   if (saved) {
