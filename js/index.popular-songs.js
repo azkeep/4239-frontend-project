@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ⬇️ Повертаємо відновлення з localStorage
   const saved = localStorage.getItem('popularSongsText');
   if (saved) {
     description.innerHTML = saved;
