@@ -1,9 +1,11 @@
 <div class="contacts__register">
     <div class="contacts__map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162757.83675618382!2d30.367885964738367!3d50.402137935609595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1749406135634!5m2!1sru!2sua"
-            width="1170" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contacts__map-wrapper">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162757.83675618382!2d30.367885964738367!3d50.402137935609595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1749406135634!5m2!1sru!2sua"
+                    width="1170" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
     <div class="contacts__register_inner_container">
         <div class="contacts__main-info">
@@ -55,7 +57,7 @@
 
             <p class="contacts__radio-link">
                 <a href="#" class="contacts__radio-link--active" target="_blank"><b>Listen to the
-                        radio</b></a> →
+                    radio</b></a> →
             </p>
         </div>
 
@@ -64,21 +66,22 @@
                 <fieldset class="contacts__fieldset">
                     <label class="contacts__input">
                         <input type="text" name="user-name" placeholder="Your name*" style="border-radius: 20px;"
-                            required>
+                               required>
                     </label>
                     <label class="contacts__input">
                         <input type="text" name="user-phone" placeholder="Phone Number*" style="border-radius: 20px;"
-                            required>
+                               required>
                     </label>
                     <label class="contacts__input">
                         <input type="text" name="user-email" placeholder="Email*" style="border-radius: 20px;" required>
                     </label>
                     <label class="contacts__input">
                         <textarea id="message" name="message" rows="5" cols="25" placeholder="Your message"
-                            style="border-radius: 20px;" required></textarea>
+                                  style="border-radius: 20px;" required></textarea>
                     </label>
                     <button id="contact-form-button" class="contacts__button" type="submit" style="border-radius: 20px;"
-                        name="submit">Send</button>
+                            name="submit">Send
+                    </button>
 
                 </fieldset>
             </form>

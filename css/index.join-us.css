@@ -1,41 +1,51 @@
 /* by Oleksandra Honcharova */
-/* work in progress */
+
 .join-us {
   background-color: rgb(42, 2, 57);
   color: var(--text-color-title);
-  padding: 60px 20px;
+  padding: 60px 30px;
   position: relative;
   overflow: hidden;
 }
 
 .join-us__wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .join-us__wrapper {
+    flex-direction: row;
+  }
+
+  .join-us__right {
+    margin-left: -80px;
+  }
 }
 
 .join-us__left {
-  flex: 0 0 42%;
-  text-align: left;
+  flex: 0 0 40%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 16px;
+  min-height: 100%;
+  z-index: 2;
 }
 
 .join-us__title {
-    margin: 0;
+  margin: 0;
   font-size: 0.9rem;
   font-weight: 300;
   color: var(--accent-color-three);
 }
 
 .join-us__subtitle {
-font-size: 2.25rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
@@ -49,45 +59,55 @@ font-size: 2.25rem;
   margin: 0 0 24px 0;
 }
 
- .join-us__button {
-    padding-top: 9px;
-    width: 180px;
-    height: 42px;
-    border-radius: 21px;
-    color: var(--text-color-title);
-    background-image: linear-gradient(
-            45deg,
-            var(--accent-color-one),
-            var(--accent-color-four)
-    );
+.join-us__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 42px;
+  border-radius: 21px;
+  color: var(--text-color-title);
+  background-image: linear-gradient(
+    45deg,
+    var(--accent-color-one),
+    var(--accent-color-four)
+  );
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
 
-    &:hover {
-        background-image: linear-gradient(
-                45deg,
-                var(--accent-color-four),
-                var(--accent-color-one)
-        );
-        cursor: pointer;
-    }
+.join-us__button:hover {
+  background-image: linear-gradient(
+    45deg,
+    var(--accent-color-four),
+    var(--accent-color-one)
+  );
 }
 
 .join-us__right {
-  flex: 0 0 58%;
+  flex: 0 0 60%;
   position: relative;
-  min-height: 300px;
+  min-height: 450px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .join-us__image {
   position: absolute;
   top: 0;
-    left: 0; 
-    width: 100%;
-     height: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   pointer-events: none;
   user-select: none;
   border-radius: 8px;
   z-index: 0;
 }
-

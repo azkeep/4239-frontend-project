@@ -1,32 +1,7 @@
 // by Oleksandr Braiko
 
-const popularArtists = [
-    {
-        name: "John Echo",
-        imagePath: "img/index/popular-artists/guitar-boy-blue.webp",
-        location: "New York"
-    },
-    {
-        name: "Electric Mirage",
-        imagePath: "img/index/popular-artists/hustler-graffiti.webp",
-        location: "Puerto Rico"
-    },
-    {
-        name: "Serenade",
-        imagePath: "img/index/popular-artists/girls-orange-blue.webp",
-        location: "San Francisco"
-    },
-    {
-        name: "Hurricane",
-        imagePath: "img/index/popular-artists/drummer-orange.webp",
-        location: "Vienna"
-    },
-    {
-        name: "Velvet Skyline",
-        imagePath: "img/index/popular-artists/girl-red.webp",
-        location: "Washington"
-    }
-];
+const response = await fetch ('./api/popular-artists.json');
+const popularArtists = await response.json();
 
 const lineStyles = [
     "line-one",
@@ -69,12 +44,12 @@ const artistCardWidth = artistCard.offsetWidth;
 let artistIndex = 0;
 let artists = Array.from(artistsCarousel.children);
 
-function getVisibleCount() {
+function getVisibleArtistsCount() {
     return Math.trunc(artistsCarousel.offsetWidth / artistCardWidth);
 }
 
-function cloneSlides() {
-    const visible = getVisibleCount();
+function cloneArtistSlides() {
+    const visible = getVisibleArtistsCount();
     const originalSlides = artists.filter(s => !s.classList.contains('clone'));
 
     artists.forEach(slide => {
@@ -95,22 +70,22 @@ function cloneSlides() {
     artists = Array.from(artistsCarousel.children);
 }
 
-function setInitialPosition() {
+function setInitialArtistPosition() {
     const slideWidth = artists[0].getBoundingClientRect().width;
-    artistIndex = getVisibleCount();
+    artistIndex = getVisibleArtistsCount();
     artistsCarousel.style.transition = 'none';
     artistsCarousel.style.transform = `translateX(-${slideWidth * artistIndex}px)`;
 }
 
-function moveToSlide() {
+function moveToArtistSlide() {
     const slideWidth = artists[0].getBoundingClientRect().width;
-    artistsCarousel.style.transition = 'transform 0.5s ease-in-out';
+    artistsCarousel.style.transition = 'transform 500ms ease-in-out';
     artistsCarousel.style.transform = `translateX(-${slideWidth * artistIndex}px)`;
 }
 
 artistsCarousel.addEventListener('transitionend', () => {
     const slideWidth = artists[0].getBoundingClientRect().width;
-    const visible = getVisibleCount();
+    const visible = getVisibleArtistsCount();
 
     if (artists[artistIndex].classList.contains('clone')) {
         artistsCarousel.style.transition = 'none';
@@ -127,24 +102,24 @@ artistsCarousel.addEventListener('transitionend', () => {
 
 artistNextButton.addEventListener('click', () => {
     artistIndex++;
-    moveToSlide();
+    moveToArtistSlide();
 })
 
 artistPrevButton.addEventListener('click', () => {
     artistIndex--;
-    moveToSlide();
+    moveToArtistSlide();
 })
 
-function rebuildCarousel() {
-    cloneSlides();
-    setInitialPosition();
+function rebuildArtistsCarousel() {
+    cloneArtistSlides();
+    setInitialArtistPosition();
 }
 
 window.addEventListener('resize', () => {
-    rebuildCarousel();
+    rebuildArtistsCarousel();
 })
 
-rebuildCarousel();
+rebuildArtistsCarousel();
 
 function scrollToElement() {
     const url = new URL(document.URL);
