@@ -7,7 +7,7 @@ class PopularMusicCarousel {
     this.nextButton = document.querySelector('.popular_music__button--right');
 
     this.slidesPerView = this.getSlidesPerView();
-    this.currentIndex = this.slidesPerView; // стартуем с первого реального слайда с учётом клонов
+    this.currentIndex = this.slidesPerView;
 
     this.setupInfiniteScroll();
 
@@ -20,13 +20,12 @@ class PopularMusicCarousel {
   }
 
   getSlidesPerView() {
-    if (window.innerWidth >= 1024) return 4;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
+    if (window.innerWidth < 767) return 1;
+    if (window.innerWidth < 991) return 2;
+    return 4;
   }
 
   clearClones() {
-    // Удаляем все клоны из списка
     this.slides = Array.from(this.list.querySelectorAll('.popular_music__item'));
     this.slides.forEach(slide => {
       if (!this.originalSlides.includes(slide)) {
@@ -51,6 +50,7 @@ class PopularMusicCarousel {
   }
 
   updateSlidePositions(transition = true) {
+    this.slidesPerView = this.getSlidesPerView();
     const slideWidth = 100 / this.slidesPerView;
     this.slides.forEach(slide => {
       slide.style.width = `${slideWidth}%`;
@@ -93,7 +93,6 @@ class PopularMusicCarousel {
 
     if (oldSlidesPerView === newSlidesPerView) return;
 
-    // Считаем индекс текущего реального слайда без учёта клонов
     const slidesCount = this.originalSlides.length;
     let realIndex = this.currentIndex - oldSlidesPerView;
     if (realIndex < 0) realIndex = 0;
@@ -102,7 +101,6 @@ class PopularMusicCarousel {
     this.slidesPerView = newSlidesPerView;
     this.setupInfiniteScroll();
 
-    // Пересчитываем currentIndex с новым slidesPerView и realIndex
     this.currentIndex = realIndex + this.slidesPerView;
 
     this.updateSlidePositions(false);

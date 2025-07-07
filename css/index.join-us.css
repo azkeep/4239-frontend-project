@@ -1,30 +1,25 @@
 /* by Oleksandra Honcharova */
 
 .join-us {
-  background-color: rgb(42, 2, 57);
-  color: var(--text-color-title);
-  padding: 60px 30px;
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
   position: relative;
   overflow: hidden;
 }
 
 .join-us__wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: stretch;
-  gap: 40px;
+  width: 100%;
+  font-family: var(--font-regular);
+  padding: 0 20px;
 }
 
-@media (min-width: 768px) {
-  .join-us__wrapper {
-    flex-direction: row;
-  }
-
-  .join-us__right {
-    margin-left: -80px;
-  }
+.join-us__item {
+  box-sizing: border-box;
+  padding: 0 20px;
+  min-width: 281px;
 }
 
 .join-us__left {
@@ -32,31 +27,39 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  min-height: 100%;
+  background: rgb(42, 2, 57);
   z-index: 2;
+  padding: 40px;
+  line-height: 1.2;
 }
 
+.join-us__right {
+  flex: 0 0 60%;
+  position: relative;
+  background: url("../img/index/join-us-background.png") no-repeat center center / cover;
+  z-index: 1;
+}
+
+/* Текст */
 .join-us__title {
-  margin: 0;
+  margin: 0 0 12px 0;
   font-size: 0.9rem;
-  font-weight: 300;
   color: var(--accent-color-three);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .join-us__subtitle {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
+  font-size: 1.7rem;
+  margin: 0 0 20px 0;
   color: var(--text-color-title);
+  line-height: 1.5;
 }
 
 .join-us__description {
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: var(--text-color-title);
-  margin: 0 0 24px 0;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  color: var(--text-color-secondary);
 }
 
 .join-us__button {
@@ -81,6 +84,8 @@
   user-select: none;
   cursor: pointer;
   transition: background-image 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .join-us__button:hover {
@@ -91,23 +96,62 @@
   );
 }
 
-.join-us__right {
-  flex: 0 0 60%;
-  position: relative;
-  min-height: 450px;
-  overflow: hidden;
-  z-index: 1;
+@media (max-width: 768px) {
+  .join-us__wrapper {
+    flex-direction: column;
+    min-height: 600px;
+  }
+
+  .join-us__left,
+  .join-us__right {
+    flex: 1 1 100%;
+    height: auto;
+  }
+
+  .join-us__right {
+    height: 100%;
+    display: block;
+    z-index: 3;
+  }
+
+  .join-us__title {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .join-us__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .join-us__description {
+    font-size: 0.95rem;
+  }
+
+  .join-us__button {
+    font-size: 0.95rem;
+    width: 160px;
+    height: 40px;
+  }
 }
 
-.join-us__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-  border-radius: 8px;
-  z-index: 0;
+/* Планшеты и десктопы */
+@media (min-width: 769px) {
+  .join-us__title {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .join-us__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .join-us__description {
+    font-size: 0.9rem;
+  }
+
+  .join-us__button {
+    font-size: 0.9rem;
+    width: 160px;
+    height: 38px;
+  }
 }

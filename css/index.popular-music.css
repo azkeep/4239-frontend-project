@@ -1,15 +1,14 @@
 /* Oleksandra Honcharova */
-
 .popular_music {
     max-width: 1170px;
-    margin: auto;
+    margin: 20px 20px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden; /* важно, чтобы не было прокрутки по оси X */
+    overflow: hidden;
     padding-bottom: 60px;
     padding-top: 20px;
-    display: flex; /* добавлено, чтобы flexbox работал корректно */
+    display: flex;
 }
 
 .popular_music__carousel {
@@ -23,8 +22,6 @@
 
 .popular_music__list {
     display: flex;
-    margin: 50px 0 0 0;
-    padding: 0 20px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
@@ -37,7 +34,7 @@
 }
 
 .popular_music__item {
-    margin: 0 15px 0 15px;
+   min-width: calc(100% / 4 - 20px);
     justify-content: space-around;
     flex: 0 0 auto;
     color:  var(--text-color-title);
@@ -105,4 +102,15 @@
 
 .popular_music__title {
   font-size: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .popular_music__item {
+    min-width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .popular_music__item {
+    min-width: 100%;
+  }
 }
